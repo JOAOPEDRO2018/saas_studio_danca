@@ -46,6 +46,10 @@ New-Item -ItemType Directory -Force $destino | Out-Null
 foreach ($p in $paginas) {
   $html = [IO.File]::ReadAllText((Join-Path $origem "$($p.tela)\code.html"), [Text.Encoding]::UTF8)
 
+  # Algumas exportações do Stitch deixam no <html> o tamanho fixo da captura de tela
+  # (ex.: width: 1280px; height: 1766px; overflow: hidden), que trava a rolagem.
+  $html = [regex]::Replace($html, '(<html[^>]*?)\s+style="[^"]*"', '$1', 1)
+
   # Título da aba.
   $titulo = "<title>IsaDance · $($p.titulo)</title>"
   if ($html -match '<title>[\s\S]*?</title>') { $html = [regex]::Replace($html, '<title>[\s\S]*?</title>', $titulo) }
