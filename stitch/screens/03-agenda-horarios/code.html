@@ -1,0 +1,1261 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#efdee5",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#890a57",
+          "outline": "#887179",
+          "surface-container": "#f4ecee",
+          "surface-container-high": "#eee6e9",
+          "surface-bright": "#fff7fa",
+          "primary": "#981c63",
+          "surface": "#fff7fa",
+          "tertiary-fixed": "#ffd9e4",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd8db",
+          "on-secondary-fixed-variant": "#4f4449",
+          "secondary-fixed-dim": "#d2c2c9",
+          "on-tertiary-fixed": "#350c1f",
+          "on-error": "#ffffff",
+          "on-primary-container": "#ffe5ed",
+          "inverse-on-surface": "#f7eff1",
+          "background": "#fff7fa",
+          "secondary-container": "#efdee5",
+          "on-surface-variant": "#554149",
+          "on-background": "#1e1b1d",
+          "surface-container-low": "#f9f2f4",
+          "on-tertiary-fixed-variant": "#69374b",
+          "on-tertiary-container": "#ffe5ec",
+          "on-secondary-container": "#6d6167",
+          "on-surface": "#1e1b1d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#22191e",
+          "on-tertiary": "#ffffff",
+          "inverse-surface": "#332f31",
+          "inverse-primary": "#ffb0d0",
+          "on-primary-fixed": "#3d0024",
+          "surface-tint": "#a82b70",
+          "primary-fixed-dim": "#ffb0d0",
+          "primary-fixed": "#ffd8e6",
+          "tertiary-container": "#915a6f",
+          "tertiary-fixed-dim": "#f7b4cc",
+          "tertiary": "#764257",
+          "surface-container-highest": "#e8e1e3",
+          "error": "#ba1a1a",
+          "secondary": "#675b61",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "primary-container": "#b8387c",
+          "outline-variant": "dbbfc8",
+          "surface-variant": "#e8e1e3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(61,19,38,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">IsaDance</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio Manager</span></div></div><div class="w-2 h-2 rounded-full bg-primary/40"></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(61,19,38,0.04)] flex items-center gap-space-sm"><div class="relative"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold">IS</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Diretora Artística</span></div></div></div><nav class="px-space-sm py-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="visao-geral" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">grid_view</span><span class="font-label-lg text-label-lg">Visão Geral</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="alunos-matriculas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">group</span><span class="font-label-lg text-label-lg">Alunos &amp; Matrículas</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">248</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="grade-agenda-de-aulas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">calendar_month</span><span class="font-label-lg text-label-lg">Grade &amp; Agenda de Aulas</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="financeiro-mensalidades" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">payments</span><span class="font-label-lg text-label-lg">Financeiro &amp; Mensalidades</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-bold border border-rose-200">12 Pendentes</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="relatorios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">query_stats</span><span class="font-label-lg text-label-lg">Relatórios</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="configuracoes-logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">tune</span><span class="font-label-lg text-label-lg">Configurações &amp; Logs</span></div></a></nav></div><div class="p-space-md"></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(61,19,38,0.03)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Buscar alunas, turmas, modalidades ou recibos..." type="text"></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-2 rounded-xl border border-outline-variant/30 shrink-0 text-on-surface"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">event</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-medium focus:outline-none cursor-pointer"><option>Novembro / 2024</option><option>Dezembro / 2024</option><option>Janeiro / 2025</option></select></div></div><div class="flex items-center gap-space-md"><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button></div><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UEopEuV_OhVlxZuzPEBJTqOyQPdYzwpUkOzqEOEc1aiaJXmDKyFz69I1yY97RKhT9b9b4uTThkDmkDjdVrlGbrIW0mUG-Gg3W4YL8_GjsqSXmb1efK-bnPQmmUKWev0sKa8dfUENoQaHoMJWfwhBV6nJMrZq52YVruJ5Xq02oun93UEm0r8MTD7eV3XNi7XqVZBNnGzUfJFtYS2yd7VN1lGH6RbL1SegqsqbEPXwR5lfhM6ShNSnXmPhi6"><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Administradora</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="relative pt-20 w-full px-space-xl py-space-lg bg-surface flex-1"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command Center & Controls Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- View Mode Segmented Switch -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg shadow-inner">
+<button class="px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" id="viewWeekly" onclick="switchView('weekly')">
+<span class="material-symbols-outlined text-[16px]">calendar_view_week</span>
+          Semanal
+        </button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="viewDaily" onclick="switchView('daily')">
+<span class="material-symbols-outlined text-[16px]">calendar_view_day</span>
+          Diária
+        </button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="viewRoom" onclick="switchView('room')">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span>
+          Por Sala
+        </button>
+</div>
+<!-- Week Navigator -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-2 px-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">date_range</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">18 a 23 de Novembro, 2024</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">Semana 47</span>
+</div>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Filters and Primary Action -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Filter: Studio Room -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">door_front</span>
+<select class="h-10 pl-9 pr-8 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option value="all">Todas as Salas (3)</option>
+<option value="sala1">Sala 1 • Petit Ballet</option>
+<option value="sala2">Sala 2 • Contemporâneo</option>
+<option value="sala3">Sala 3 • Dança de Salão</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Filter: Teacher -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">person</span>
+<select class="h-10 pl-9 pr-8 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container">
+<option value="all">Todos Professores</option>
+<option value="isabela">Isabela Santos (Diretora)</option>
+<option value="marcos">Marcos Vinicius (Jazz)</option>
+<option value="clara">Clara Mendonça (Ballet)</option>
+<option value="diego">Diego Ferreira (Salão)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Add New Class CTA -->
+<button class="h-10 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-md flex items-center gap-2 active:scale-95" onclick="toggleNewClassModal(true)">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">Agendar Nova Aula</span>
+</button>
+</div>
+</div>
+<!-- Main Workboard: Grid Schedule + Live Operational Rail -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Area: Dynamic Interactive Schedule Board (Col 9) -->
+<div class="xl:col-span-9 flex flex-col gap-space-md">
+<!-- Modality Tags & Quick Status Legend -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm px-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium uppercase tracking-wider">Categorias:</span>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Ballet Clássico / Infantil
+          </span>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            Jazz &amp; Dança Moderna
+          </span>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Danças Urbanas &amp; Hip Hop
+          </span>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Dança de Salão &amp; Tango
+          </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> 94% Ocupação Geral</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">sensors</span> 3 Aulas ao Vivo</span>
+</div>
+</div>
+<!-- Weekly Schedule Matrix Canvas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Days Header -->
+<div class="grid grid-cols-7 bg-surface-container-low text-center">
+<div class="py-3 px-2 font-label-md text-label-md text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Segunda</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">18</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center bg-secondary-fixed/30 rounded-t-lg">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Terça (Hoje)</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">19</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Quarta</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">20</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Quinta</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">21</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sexta</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">22</span>
+</div>
+<div class="py-3 px-2 flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sábado</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">23</span>
+</div>
+</div>
+<!-- Time Rows Container -->
+<div class="divide-y divide-surface-container overflow-x-auto">
+<!-- Time Block 07:00 - 08:30 -->
+<div class="grid grid-cols-7 min-h-[96px] group hover:bg-surface-bright transition-colors">
+<div class="p-2 flex flex-col justify-start items-center text-on-surface-variant bg-surface-container-low/40">
+<span class="font-label-md text-label-md font-bold">07:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">08:15</span>
+</div>
+<!-- Seg -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/70 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm hover:shadow flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Fit</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Conf.</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Alongamento Matinal</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">12/12 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Ter (Today) -->
+<div class="p-1.5 bg-secondary-fixed/10 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-semibold">Pilates Solo</span>
+<span class="font-label-sm text-label-sm text-secondary px-1 rounded">Finalizada</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Postura &amp; Flex</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sala 2 • Julia B.</p>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold">10/10 vagas</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Qua -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/70 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Fit</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Conf.</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Alongamento Matinal</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">11/12 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Qui -->
+<div class="p-1.5 flex items-center justify-center">
+<button class="w-full h-full rounded-lg hover:bg-surface-container/50 text-on-surface-variant/40 hover:text-primary transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Sex -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/70 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Fit</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Conf.</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Alongamento Matinal</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">12/12 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Sab -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed/60 hover:bg-tertiary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-tertiary-fixed font-bold">Workshops</span>
+<span class="font-label-sm text-label-sm text-amber-700 bg-amber-50 px-1 rounded">Especial</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-tertiary-fixed-variant font-bold leading-tight">Masterclass PBT</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Sala 3 • Convidada</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">18/20 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Time Block 09:00 - 10:30 -->
+<div class="grid grid-cols-7 min-h-[110px] group hover:bg-surface-bright transition-colors">
+<div class="p-2 flex flex-col justify-start items-center text-on-surface-variant bg-surface-container-low/40">
+<span class="font-label-md text-label-md font-bold">09:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">10:15</span>
+</div>
+<!-- Seg -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/50 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Baby Class</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">3-5 anos</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Iniciação Ballet I</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Isabela S.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">14/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">child_care</span>
+</div>
+</div>
+</div>
+<!-- Ter (Today - Highlighted Live) -->
+<div class="p-1.5 bg-secondary-fixed/10 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-primary-container text-on-primary-container shadow-md hover:scale-[1.01] transition-transform cursor-pointer flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Em Aula
+                    </span>
+<span class="font-label-sm text-label-sm text-white bg-black/20 px-1.5 rounded font-bold">Sala 2</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold leading-tight text-white">Jazz Contemporâneo Inter.</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container">Prof. Marcos Vinicius</p>
+</div>
+<div class="flex items-center justify-between pt-1 mt-1 text-on-primary-container">
+<span class="font-label-sm text-label-sm font-semibold">15/16 alunas</span>
+<span class="material-symbols-outlined text-[16px] text-white">music_note</span>
+</div>
+</div>
+</div>
+<!-- Qua -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/50 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Baby Class</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">3-5 anos</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Iniciação Ballet I</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Isabela S.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">14/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">child_care</span>
+</div>
+</div>
+</div>
+<!-- Qui -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-primary-fixed/80 hover:bg-primary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Jazz Teen</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Juvenil</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-primary-fixed font-bold leading-tight">Jazz Contemporâneo</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Sala 2 • Marcos V.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">12/16 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Sex -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-surface-container-high/70 hover:bg-surface-container-high transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-bold">Salão</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Casais</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Samba &amp; Forró Matutino</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sala 3 • Diego F.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">8/10 pares</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+</div>
+</div>
+</div>
+<!-- Sab -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/90 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ponta I</span>
+<span class="font-label-sm text-label-sm text-rose-700 bg-rose-50 px-1 rounded font-bold">Exame</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Ballet Avançado &amp; Repertório</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Isabela S.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">16/16 LOTADA (+3 esp.)</span>
+<span class="material-symbols-outlined text-[14px] text-primary">hotel_class</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Time Block 14:00 - 15:30 -->
+<div class="grid grid-cols-7 min-h-[96px] group hover:bg-surface-bright transition-colors">
+<div class="p-2 flex flex-col justify-start items-center text-on-surface-variant bg-surface-container-low/40">
+<span class="font-label-md text-label-md font-bold">14:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">15:15</span>
+</div>
+<!-- Seg -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/60 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Infantil II</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">7-9 anos</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Ballet Preparatório</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">13/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Ter (Today) -->
+<div class="p-1.5 bg-secondary-fixed/10 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed/70 hover:bg-tertiary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-tertiary-fixed font-bold">Street</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Confirmada</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-tertiary-fixed font-bold leading-tight">Hip Hop &amp; Locking Kids</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Sala 3 • Leo Costa</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">18/18 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">graphic_eq</span>
+</div>
+</div>
+</div>
+<!-- Qua -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/60 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Infantil II</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">7-9 anos</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Ballet Preparatório</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">14/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Qui -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed/70 hover:bg-tertiary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-tertiary-fixed font-bold">Street</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Confirmada</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-tertiary-fixed font-bold leading-tight">Hip Hop &amp; Locking Kids</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Sala 3 • Leo Costa</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">17/18 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">graphic_eq</span>
+</div>
+</div>
+</div>
+<!-- Sex -->
+<div class="p-1.5 flex items-center justify-center">
+<button class="w-full h-full rounded-lg hover:bg-surface-container/50 text-on-surface-variant/40 hover:text-primary transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Sab -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-primary-fixed/70 hover:bg-primary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ensaio</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Festival</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-primary-fixed font-bold leading-tight">Companhia Juvenil IsaDance</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Sala 2 • Marcos &amp; Isabela</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Corpo de Baile (22)</span>
+<span class="material-symbols-outlined text-[14px] text-primary">theater_comedy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Time Block 17:00 - 18:30 -->
+<div class="grid grid-cols-7 min-h-[96px] group hover:bg-surface-bright transition-colors">
+<div class="p-2 flex flex-col justify-start items-center text-on-surface-variant bg-surface-container-low/40">
+<span class="font-label-md text-label-md font-bold">17:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">18:15</span>
+</div>
+<!-- Seg -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-primary-fixed/80 hover:bg-primary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Jazz Musical</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Intermed.</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-primary-fixed font-bold leading-tight">Broadway Styles</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Sala 2 • Marcos V.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">14/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">theater_comedy</span>
+</div>
+</div>
+</div>
+<!-- Ter (Today) -->
+<div class="p-1.5 bg-secondary-fixed/10 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/80 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Adulto</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Iniciante</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Fundamentos &amp; Barra</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">15/15 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-primary">accessibility_new</span>
+</div>
+</div>
+</div>
+<!-- Qua -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-primary-fixed/80 hover:bg-primary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Jazz Musical</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Intermed.</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-primary-fixed font-bold leading-tight">Broadway Styles</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Sala 2 • Marcos V.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">14/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">theater_comedy</span>
+</div>
+</div>
+</div>
+<!-- Qui -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/80 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Adulto</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Iniciante</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Fundamentos &amp; Barra</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Clara M.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">13/15 vagas</span>
+<span class="material-symbols-outlined text-[14px] text-primary">accessibility_new</span>
+</div>
+</div>
+</div>
+<!-- Sex -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-high transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-bold">Dança Salão</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Avançado</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Tango Argentino &amp; Milonga</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sala 3 • Diego F.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">10/10 pares</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+</div>
+</div>
+</div>
+<!-- Sab -->
+<div class="p-1.5 flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60">Horário Livre</span>
+</div>
+</div>
+<!-- Time Block 19:00 - 20:30 -->
+<div class="grid grid-cols-7 min-h-[96px] group hover:bg-surface-bright transition-colors">
+<div class="p-2 flex flex-col justify-start items-center text-on-surface-variant bg-surface-container-low/40">
+<span class="font-label-md text-label-md font-bold">19:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">20:30</span>
+</div>
+<!-- Seg -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed/80 hover:bg-tertiary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-tertiary-fixed font-bold">Urbano</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Noite</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-tertiary-fixed font-bold leading-tight">Hip Hop Avançado / Coreo</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Sala 2 • Leo Costa</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">20/20 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">groups</span>
+</div>
+</div>
+</div>
+<!-- Ter (Today) -->
+<div class="p-1.5 bg-secondary-fixed/10 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-high transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-bold">Salão</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Confirmada</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Zouk Brasileiro &amp; Bachata</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sala 3 • Diego F.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">9/10 pares</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+</div>
+</div>
+</div>
+<!-- Qua -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed/80 hover:bg-tertiary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-tertiary-fixed font-bold">Urbano</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Noite</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-tertiary-fixed font-bold leading-tight">Hip Hop Avançado / Coreo</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Sala 2 • Leo Costa</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">20/20 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">groups</span>
+</div>
+</div>
+</div>
+<!-- Qui -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-high transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-bold">Salão</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Confirmada</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Zouk Brasileiro &amp; Bachata</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sala 3 • Diego F.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">10/10 pares</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">favorite</span>
+</div>
+</div>
+</div>
+<!-- Sex -->
+<div class="p-1.5 flex flex-col justify-center">
+<div class="p-2.5 rounded-lg bg-secondary-fixed/90 hover:bg-secondary-fixed transition-all cursor-pointer shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-bold">Ballet Noite</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-1 rounded">Inter/Avanç</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">Ballet Clássico Intenso</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Sala 1 • Isabela S.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">15/15 lotada</span>
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+</div>
+</div>
+</div>
+<!-- Sab -->
+<div class="p-1.5 flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60">Fechamento Estúdio</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Studio Occupancy & Ambient Metrics Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Room 1 Metric Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Sala 1 • Petit Ballet</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold">Piso Flutuante OK</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">96%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ocupação semanal</span>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 96%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 mt-2">Capacidade: 16 alunas • 6 aulas hoje</span>
+</div>
+<!-- Room 2 Metric Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Sala 2 • Contemporâneo</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold">Em Uso Agora</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">88%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ocupação semanal</span>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 88%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 mt-2">Capacidade: 20 alunas • Sonorização Hi-Fi</span>
+</div>
+<!-- Room 3 Metric Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Sala 3 • Dança de Salão</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Espelhos Livres</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">92%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ocupação semanal</span>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 92%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 mt-2">Capacidade: 12 pares • Climatizado</span>
+</div>
+</div>
+</div>
+<!-- Right Rail: Studio Live Operations Panel (Col 3) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Studio Atmospheric Banner -->
+<div class="relative rounded-xl overflow-hidden shadow-sm h-36 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Graceful ballet dancer warming up in a bright sunlit studio with pink ribbons, polished wooden floors, large mirrored walls and soft artistic aesthetic of IsaDance Academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHbSwmrktutr5lCD0oUrZGu-GH6_Ce9ayAWe9RxbGdqyNb_0To_bIYqM9AETvYFUkZOsAwD3CC8c3C2P-RU7TcHMlgjtnQ4_5I5lBYL0l3wg-cd7RSTxZ-ZSP_iID1J64yqGMMQCLJ5LZVyouneAqbH5e4R3tt6mXjq-ezey3jpqCPelQthp7_5ZoKv57rmcTbi66WGUqi14pgph4gDYDLmM9leLNle5eplzkZe2Et">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-space-md text-white">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed font-bold">IsaDance Studio</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Temporada de Festivais</h3>
+<p class="font-body-sm text-body-sm text-slate-200">12 dias para fechamento das turmas do Gala de Fim de Ano.</p>
+</div>
+</div>
+<!-- Quick Action: Próximas Aulas de Hoje (Timeline) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-surface-container pb-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+<span class="">Aulas de Hoje</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-primary font-bold">Terça</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Item 1 (Live) -->
+<div class="p-space-sm rounded-lg bg-primary-fixed/30 flex items-start justify-between">
+<div class="flex items-start gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Jazz Contemporâneo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">09:00 - 10:15 • Sala 2</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">15 alunas presentes</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-all" onclick="openAttendanceModal('Jazz Contemporâneo')">
+              Chamada
+            </button>
+</div>
+<!-- Item 2 (Next) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between">
+<div class="flex items-start gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-amber-400 mt-1.5"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Hip Hop &amp; Locking Kids</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14:00 - 15:15 • Sala 3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prof. Leo Costa • 18 confirmadas</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-all" onclick="openAttendanceModal('Hip Hop Kids')">
+              Lista
+            </button>
+</div>
+<!-- Item 3 (Upcoming) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between">
+<div class="flex items-start gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline-variant mt-1.5"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Ballet Adulto Iniciante</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">17:00 - 18:15 • Sala 1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prof. Clara M. • 15 confirmadas</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-all" onclick="openAttendanceModal('Ballet Adulto')">
+              Lista
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Roster / Chamada Rápida Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">how_to_reg</span>
+<span class="">Chamada Express</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sala 2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          Marque presença rápida das bailarinas da turma em andamento:
+        </p>
+<div class="flex flex-col gap-2 divide-y divide-surface-container">
+<!-- Student 1 -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-primary font-label-sm text-label-sm">
+                AL
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Ana Luiza Pires</span>
+<span class="font-label-sm text-label-sm text-emerald-700">Mensalidade OK</span>
+</div>
+</div>
+<label class="flex items-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox">
+</label>
+</div>
+<!-- Student 2 -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-primary font-label-sm text-label-sm">
+                BF
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Beatriz Fontes</span>
+<span class="font-label-sm text-label-sm text-emerald-700">Mensalidade OK</span>
+</div>
+</div>
+<label class="flex items-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox">
+</label>
+</div>
+<!-- Student 3 -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-tertiary font-label-sm text-label-sm">
+                CO
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Camila Oliveira</span>
+<span class="font-label-sm text-label-sm text-amber-700">Atestado Médico Pend.</span>
+</div>
+</div>
+<label class="flex items-center cursor-pointer">
+<input class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox">
+</label>
+</div>
+<!-- Student 4 -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-primary font-label-sm text-label-sm">
+                GM
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Giovanna Moura</span>
+<span class="font-label-sm text-label-sm text-emerald-700">Mensalidade OK</span>
+</div>
+</div>
+<label class="flex items-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox">
+</label>
+</div>
+</div>
+<button class="mt-2 w-full py-2 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1" onclick="confirmAttendanceToast()">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+          Salvar Frequência da Aula
+        </button>
+</div>
+<!-- Waitlist Panel (Fila de Espera) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">hourglass_top</span>
+<span class="">Fila de Espera</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-bold font-label-sm text-label-sm">7 Alunas</span>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<!-- Waitlist 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Mariana Lima</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">1ª da fila</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ballet Avançado &amp; Ponta • Sáb 09:00</span>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Aguardando desde 12/11</span>
+<button class="px-2 py-0.5 rounded bg-secondary-fixed text-primary font-label-sm text-label-sm font-bold hover:bg-primary hover:text-white transition-all" onclick="promoteWaitlist('Mariana Lima')">
+                Promover
+              </button>
+</div>
+</div>
+<!-- Waitlist 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Lorena Esteves (Mãe: Paula)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2ª da fila</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Baby Class I • Ter/Qui 09:00</span>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Aguardando desde 14/11</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-secondary-fixed hover:text-primary transition-all" onclick="promoteWaitlist('Lorena Esteves')">
+                Notificar
+              </button>
+</div>
+</div>
+</div>
+<button class="w-full text-center text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold pt-1">
+          Ver todas as 7 alunas em espera →
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal: Agendar Nova Aula / Criar Turma (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4" id="newClassModal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-center justify-between border-b border-surface-container pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">add_task</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Agendar Nova Aula / Turma</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cadastre uma sessão pontual ou recorrente na grade.</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="toggleNewClassModal(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-md" id="newClassForm" onsubmit="handleFormSubmit(event)">
+<!-- Title & Modality -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Nome da Aula / Turma</label>
+<input class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container" placeholder="Ex: Ballet Intermediário II" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Modalidade</label>
+<select class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container">
+<option>Ballet Clássico</option>
+<option>Jazz Contemporâneo</option>
+<option>Danças Urbanas</option>
+<option>Dança de Salão</option>
+<option>Alongamento &amp; PBT</option>
+</select>
+</div>
+</div>
+<!-- Instructor & Room -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Professor(a)</label>
+<select class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container">
+<option>Isabela Santos (Diretora)</option>
+<option>Marcos Vinicius (Jazz)</option>
+<option>Clara Mendonça (Ballet)</option>
+<option>Diego Ferreira (Salão)</option>
+<option>Leo Costa (Hip Hop)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Sala do Estúdio</label>
+<select class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container">
+<option>Sala 1 • Petit Ballet (Cap. 16)</option>
+<option>Sala 2 • Contemporâneo (Cap. 20)</option>
+<option>Sala 3 • Dança de Salão (Cap. 24)</option>
+</select>
+</div>
+</div>
+<!-- Schedule & Capacity -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Dia da Semana</label>
+<select class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container">
+<option>Segunda-feira</option>
+<option>Terça-feira</option>
+<option>Quarta-feira</option>
+<option>Quinta-feira</option>
+<option>Sexta-feira</option>
+<option>Sábado</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Horário Início/Fim</label>
+<input class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container" placeholder="15:30 - 16:45" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Lotação Máx.</label>
+<input class="h-10 px-3 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:bg-surface-container" max="30" min="1" type="number" value="16">
+</div>
+</div>
+<!-- Notification Toast Option -->
+<div class="flex items-center gap-2 p-3 bg-surface-container rounded-lg">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" id="notifyStudents" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer" for="notifyStudents">
+            Notificar alunas matriculadas via aplicativo e WhatsApp sobre esta turma.
+          </label>
+</div>
+<!-- Modal Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="h-10 px-space-md rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="toggleNewClassModal(false)" type="button">
+            Cancelar
+          </button>
+<button class="h-10 px-space-lg rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md active:scale-95" type="submit">
+            Salvar e Publicar na Grade
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-primary text-on-primary px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-2" id="toastMessage">
+<span class="material-symbols-outlined text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastText">Ação realizada com sucesso!</span>
+</div>
+</div>
+<script>
+  function switchView(mode) {
+    const btnWeekly = document.getElementById('viewWeekly');
+    const btnDaily = document.getElementById('viewDaily');
+    const btnRoom = document.getElementById('viewRoom');
+
+    [btnWeekly, btnDaily, btnRoom].forEach(btn => {
+      btn.className = "px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5";
+    });
+
+    if (mode === 'weekly') {
+      btnWeekly.className = "px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5";
+      showToast("Modo de Grade Semanal ativado.");
+    } else if (mode === 'daily') {
+      btnDaily.className = "px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5";
+      showToast("Modo Diário carregado para Terça-feira.");
+    } else {
+      btnRoom.className = "px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5";
+      showToast("Visão por Salas 1, 2 e 3 ativada.");
+    }
+  }
+
+  function toggleNewClassModal(show) {
+    const modal = document.getElementById('newClassModal');
+    if (show) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    toggleNewClassModal(false);
+    showToast("Nova aula agendada e adicionada à grade semanal com sucesso!");
+  }
+
+  function confirmAttendanceToast() {
+    showToast("Frequência da turma salva no prontuário das alunas!");
+  }
+
+  function promoteWaitlist(studentName) {
+    showToast(`${studentName} foi promovida para a vaga principal! Notificação enviada.`);
+  }
+
+  function openAttendanceModal(className) {
+    showToast(`Carregando diário de classe: ${className}...`);
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastMessage');
+    const toastText = document.getElementById('toastText');
+    toastText.innerText = message;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+</script></main></div>
+
+</body></html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><title>IsaDance · Alunos &amp; Matrículas</title><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#efdee5",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#890a57",
+          "outline": "#887179",
+          "surface-container": "#f4ecee",
+          "surface-container-high": "#eee6e9",
+          "surface-bright": "#fff7fa",
+          "primary": "#981c63",
+          "surface": "#fff7fa",
+          "tertiary-fixed": "#ffd9e4",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd8db",
+          "on-secondary-fixed-variant": "#4f4449",
+          "secondary-fixed-dim": "#d2c2c9",
+          "on-tertiary-fixed": "#350c1f",
+          "on-error": "#ffffff",
+          "on-primary-container": "#ffe5ed",
+          "inverse-on-surface": "#f7eff1",
+          "background": "#fff7fa",
+          "secondary-container": "#efdee5",
+          "on-surface-variant": "#554149",
+          "on-background": "#1e1b1d",
+          "surface-container-low": "#f9f2f4",
+          "on-tertiary-fixed-variant": "#69374b",
+          "on-tertiary-container": "#ffe5ec",
+          "on-secondary-container": "#6d6167",
+          "on-surface": "#1e1b1d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#22191e",
+          "on-tertiary": "#ffffff",
+          "inverse-surface": "#332f31",
+          "inverse-primary": "#ffb0d0",
+          "on-primary-fixed": "#3d0024",
+          "surface-tint": "#a82b70",
+          "primary-fixed-dim": "#ffb0d0",
+          "primary-fixed": "#ffd8e6",
+          "tertiary-container": "#915a6f",
+          "tertiary-fixed-dim": "#f7b4cc",
+          "tertiary": "#764257",
+          "surface-container-highest": "#e8e1e3",
+          "error": "#ba1a1a",
+          "secondary": "#675b61",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "primary-container": "#b8387c",
+          "outline-variant": "dbbfc8",
+          "surface-variant": "#e8e1e3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(61,19,38,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">IsaDance</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio Manager</span></div></div><div class="w-2 h-2 rounded-full bg-primary/40"></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(61,19,38,0.04)] flex items-center gap-space-sm"><div class="relative"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold">IS</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Diretora Artística</span></div></div></div><nav class="px-space-sm py-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="visao-geral" href="#" data-em-breve><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">grid_view</span><span class="font-label-lg text-label-lg">Visão Geral</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm transition-all group bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="alunos-matriculas" href="alunos.html" aria-current="page"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">group</span><span class="font-label-lg text-label-lg">Alunos &amp; Matrículas</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">248</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="grade-agenda-de-aulas" href="agenda.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">calendar_month</span><span class="font-label-lg text-label-lg">Grade &amp; Agenda de Aulas</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="professores-modalidades" href="equipe.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">badge</span><span class="font-label-lg text-label-lg">Professores &amp; Modalidades</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="financeiro-mensalidades" href="financeiro.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">payments</span><span class="font-label-lg text-label-lg">Financeiro &amp; Mensalidades</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-bold border border-rose-200">12 Pendentes</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="relatorios" href="#" data-em-breve><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">query_stats</span><span class="font-label-lg text-label-lg">Relatórios</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="configuracoes-logs" href="administracao.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">tune</span><span class="font-label-lg text-label-lg">Configurações &amp; Logs</span></div></a></nav></div><div class="p-space-md"></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(61,19,38,0.03)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Buscar alunas, turmas, modalidades ou recibos..." type="text"></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-2 rounded-xl border border-outline-variant/30 shrink-0 text-on-surface"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">event</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-medium focus:outline-none cursor-pointer"><option>Novembro / 2024</option><option>Dezembro / 2024</option><option>Janeiro / 2025</option></select></div></div><div class="flex items-center gap-space-md"><div class="relative"></div><div class="relative"></div><div class="h-6 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div id="proto-avatar" class="w-8 h-8 rounded-full object-cover bg-secondary-fixed text-primary flex items-center justify-center font-bold text-[11px]">IS</div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Administradora</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="relative pt-20 w-full px-space-xl py-space-lg bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">school</span>
+          Gestão Acadêmica &amp; Bailarinos
+        </div>
+<h1 class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">Alunos &amp; Matrículas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+          Acompanhe o cadastro integral de bailarinos, distribuição de turmas, vencimentos de mensalidades e documentação médica ativa do estúdio IsaDance.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-11 px-space-md bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg rounded-xl flex items-center gap-space-xs hover:bg-secondary-fixed-dim transition-all shadow-sm" id="exportBtn">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Exportar Lista
+        </button>
+<button class="h-11 px-space-lg bg-primary text-on-primary font-label-lg text-label-lg rounded-xl flex items-center gap-space-xs shadow-md hover:bg-primary-container transition-all" id="openNewStudentModal">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+          + Nova Matrícula
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Alunos Ativos</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">148</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold">+6.4% trim</span>
+</div>
+<div class="mt-space-sm flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          100% com frequência regular
+        </div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Novas Matrículas (Mês)</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">fiber_new</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-primary font-bold">18</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-bold">Meta 20</span>
+</div>
+<div class="mt-space-sm w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Vencimento Dia 05</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-primary font-semibold">1º Ciclo</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">82</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">alunas</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="">55.4% do faturamento</span>
+<span class="text-emerald-700 font-semibold font-label-sm text-label-sm">79 quitadas</span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Vencimento Dia 10</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-semibold">2º Ciclo</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">66</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">alunas</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="">44.6% do faturamento</span>
+<span class="text-amber-700 font-semibold font-label-sm text-label-sm">52 quitadas</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-space-lg items-start">
+<div class="w-full transition-all duration-300 flex flex-col gap-space-md" id="tableSection">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row gap-space-sm items-center justify-between">
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="searchInput" placeholder="Buscar por nome ou CPF..." type="text">
+</div>
+<div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mr-1">Modalidade:</span>
+<button class="filter-chip active-filter px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-primary text-on-primary transition-all" data-modality="all">Todas</button>
+<button class="filter-chip px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-modality="ballet">Ballet Clássico</button>
+<button class="filter-chip px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-modality="jazz">Jazz Contemp.</button>
+<button class="filter-chip px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-modality="urbana">Dança Urbana</button>
+<button class="filter-chip px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-modality="salao">Dança de Salão</button>
+<button class="filter-chip px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-modality="ventre">Dança do Ventre</button>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<select class="h-10 px-3 bg-surface-container-low rounded-xl text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer" id="dueFilter">
+<option value="all">Vencimento: Todos</option>
+<option value="05">Dia 05</option>
+<option value="10">Dia 10</option>
+</select>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="studentsTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-md px-space-md font-semibold">Aluna / Matrícula</th>
+<th class="py-space-md px-space-md font-semibold">Contato WhatsApp</th>
+<th class="py-space-md px-space-md font-semibold">Modalidades Matriculadas</th>
+<th class="py-space-md px-space-md font-semibold">Idade / Nasc.</th>
+<th class="py-space-md px-space-md font-semibold">Vencimento</th>
+<th class="py-space-md px-space-md font-semibold">Status</th>
+<th class="py-space-md px-space-md text-right font-semibold">Ação</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md" id="studentRowsContainer">
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer group" data-cpf="398.241.908-11" data-due="05" data-modalities="ballet,jazz" data-name="Heloísa Fontes Ramos" data-student-id="1">
+<td class="py- space-sm px-space-md">
+<div class="flex items-center gap-space-sm py-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-sm" data-alt="Close-up portrait of a youthful female ballerina with tied bun hair and soft natural lighting in a contemporary dance studio, dressed in black leotard with pastel tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRkdWBfIjwbqEtrTm77yWLOQSoxFVygEW8REvsb4Dt6iIwbzmHTM3A4DCeGvmHBs94qkRCUhnoe3rRUdB1ZL3VG-fUNB_Qpw4tqYnCzT7n7C_ykKDZjihob3G6hOWZcKcRnIosoPqo8q3oZ54Pw8JBSpQcKWx5j6OovLCY0jDlkjY2nz19V1e5ShuJnOn07tcEjJRTp039D7rF1yFFcan-I86y4WdOgPztUMl7gp8c">
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Heloísa Fontes Ramos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAT-2024-0089</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+                    (11) 98452-1904
+                  </div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Ballet Clássico</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Jazz Contemp.</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">17 anos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14/03/2007</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-bold">Dia 05</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Em Dia
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="open-detail-btn px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary-fixed hover:text-primary text-on-surface-variant font-label-md text-label-md transition-all font-semibold" data-target="1">
+                    Ver Ficha
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer group" data-cpf="412.871.201-92" data-due="10" data-modalities="urbana" data-name="Camila Duarte Nogueira" data-student-id="2">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm py-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-sm" data-alt="Energetic portrait of an adult female urban street dancer in urban sportswear with braided hair in a luminous modern training studio with pale mauve ambient tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk2Bci4ZtBGlu2EhzzJhrVA9ZqH7Xd5cN-4m1yccC4p_8Nqm5zGEmmkGkZpRT4TykdYDf3D_yDbhmYjDegQp6qHjryzwf9fiX_XYBlIVwtAknDoIblqYl9kmjI2q6O0HaZ2WeTKqZeZJIBmc3k8ZvQxGk6D3ddajksGjuPy_ucGYge277ZqMpBPDeGayvYfk4YPxyx59fXIn8cmRj4vZaAvdP9hwrWlR2GCivKP86i">
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Camila Duarte Nogueira</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAT-2023-0144</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+                    (11) 97114-8890
+                  </div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Dança Urbana</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">22 anos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">28/09/2002</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-tertiary-fixed text-tertiary font-bold">Dia 10</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Em Dia
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="open-detail-btn px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary-fixed hover:text-primary text-on-surface-variant font-label-md text-label-md transition-all font-semibold" data-target="2">
+                    Ver Ficha
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer group" data-cpf="290.155.672-04" data-due="05" data-modalities="salao,ballet" data-name="Rodrigo Alencar Mendes" data-student-id="3">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm py-2">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold shrink-0">
+                      RM
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Rodrigo Alencar Mendes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAT-2024-0211</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+                    (11) 99182-3401
+                  </div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Dança de Salão</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Ballet Clássico</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">29 anos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">19/07/1995</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-bold">Dia 05</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pendente
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="open-detail-btn px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary-fixed hover:text-primary text-on-surface-variant font-label-md text-label-md transition-all font-semibold" data-target="3">
+                    Ver Ficha
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer group" data-cpf="331.984.771-30" data-due="10" data-modalities="ventre" data-name="Yasmin Farah Haddad" data-student-id="4">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm py-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait of an adult oriental belly dancer with elegant stage posture smiling calmly in a warm-toned rehearsal room with wooden floors and soft highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQ1mYrgNmDTUZkf-JKwkWIGqqA7ZZhc4PrLXh25qQKg8mFxe76nrdBvsEDIsGyrwkPmX-pMFI9-dgIMadiwEbiiZf0J3v84huqBbCdSG3I2-IbbNbDuwoXh8AaJYgmOBFEr-ESHqXsuokDzEscg2e_-tWkjdJS1rp7OLDpDM39cmyJpnPIfaGPnjgIbMkj8hT2dbcvTHF5K3ulwSiVHW9mXzve9b5AJaGkx0cTlUW">
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Yasmin Farah Haddad</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAT-2023-0052</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+                    (11) 98772-0012
+                  </div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed font-semibold">Dança do Ventre</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">26 anos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">04/11/1998</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-tertiary-fixed text-tertiary font-bold">Dia 10</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Em Dia
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="open-detail-btn px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary-fixed hover:text-primary text-on-surface-variant font-label-md text-label-md transition-all font-semibold" data-target="4">
+                    Ver Ficha
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer group" data-cpf="502.113.840-55" data-due="05" data-modalities="ballet" data-name="Larissa Meirelles Rios" data-student-id="5">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm py-2">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold shrink-0">
+                      LR
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">Larissa Meirelles Rios</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAT-2024-0309</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+                    (11) 97410-9941
+                  </div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Ballet Clássico</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">14 anos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">02/02/2010</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-bold">Dia 05</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span> Atrasada
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="open-detail-btn px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary-fixed hover:text-primary text-on-surface-variant font-label-md text-label-md transition-all font-semibold" data-target="5">
+                    Ver Ficha
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mostrando <span class="font-semibold text-on-surface" id="visibleCount">5</span> de 148 bailarinas matriculadas</span>
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">2</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">15</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-full lg:w-[460px] shrink-0 bg-surface-container-lowest rounded-xl shadow-lg p-space-lg flex flex-col gap-space-lg sticky top-24 transition-all" id="studentDetailsPanel">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Close-up artistic portrait of ballerina Heloisa Fontes Ramos with classical dancer chignon bun, soft natural window light in studio setting" id="detailAvatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFNFzMfkdHt15hICNPqUYI86ngVYz43uy7mzeqCqUOUbO2xVHIpeUlfBrUkWc5uu6TRgU3pDgVqyuAIq616o5XZAqewUqaZZhyrtvSN5fBEsfsWHay0gow0dJ1H-gOWD3L3ETYPZaQHEmVxVLHXojtiq3B7U7LIWmTqOZZu_0188aIP5aC1tncqhwFFDOlXODf_cXfzhK4YifP1wINVrMECjDI3noVZTvEQO5RRPEM">
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight" id="detailName">Heloísa Fontes Ramos</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="detailMatricula">MAT-2024-0089</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.2 rounded-full font-bold">Matrícula Ativa</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" id="closeDetailBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Vencimento</span>
+<span class="font-title-md text-title-md text-primary font-bold mt-0.5" id="detailDueDay">Todo Dia 05</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mensalidade Total</span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-0.5" id="detailTuition">R$ 480,00</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">badge</span>
+            Dados Pessoais
+          </h2>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline">Editar</button>
+</div>
+<div class="grid grid-cols-2 gap-y-3 gap-x-2 bg-surface-container-lowest text-body-sm font-body-sm">
+<div>
+<span class="text-on-surface-variant block font-label-sm text-label-sm">CPF</span>
+<span class="font-semibold text-on-surface" id="detailCpf">398.241.908-11</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm text-label-sm">RG / Órgão</span>
+<span class="font-semibold text-on-surface" id="detailRg">48.291.002-X SSP/SP</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm text-label-sm">Data de Nascimento</span>
+<span class="font-semibold text-on-surface" id="detailDob">14/03/2007 (17 anos)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm text-label-sm">Gênero</span>
+<span class="font-semibold text-on-surface">Feminino</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">home_pin</span>
+          Endereço Residencial
+        </h2>
+<div class="p-space-sm rounded-xl bg-surface-container-low text-body-sm font-body-sm text-on-surface">
+<p class="font-semibold" id="detailAddressStreet">Alameda dos Jacarandás, 342 - Apto 51</p>
+<p class="text-on-surface-variant" id="detailAddressCity">Bela Vista, São Paulo - SP, CEP 01311-000</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-rose-700 text-[18px]">emergency</span>
+          Contato de Emergência
+        </h2>
+<div class="p-space-sm rounded-xl bg-rose-50 text-body-sm font-body-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface" id="detailEmergencyName">Patrícia Fontes (Mãe)</span>
+<span class="text-on-surface-variant" id="detailEmergencyPhone">(11) 98452-9900</span>
+</div>
+<a class="w-8 h-8 rounded-full bg-surface-container-lowest text-rose-700 flex items-center justify-center hover:bg-rose-100 transition-colors shadow-sm" href="tel:11984529900">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+          Histórico de Aulas &amp; Frequência
+        </h2>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-body-sm font-body-sm text-on-surface">Ballet Avançado - Sala 1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ter &amp; Qui • 17:30 - 19:00</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full font-bold">96% Presença</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-body-sm font-body-sm text-on-surface">Jazz Moderno II - Sala 3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sábados • 10:00 - 11:30</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full font-bold">100% Presença</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">health_and_safety</span>
+          Observações Médicas &amp; Atestado
+        </h2>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-body-sm font-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Atestado Válido até 12/2025
+            </span>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Baixar PDF</button>
+</div>
+<p class="text-on-surface-variant text-body-sm font-body-sm mt-1" id="detailMedicalNotes">
+            Histórico de entorse leve no tornozelo direito (2023). Apta para ponta com aquecimento guiado prévio.
+          </p>
+</div>
+</div>
+<div class="pt-space-sm flex gap-space-sm">
+<button class="flex-1 h-11 bg-primary text-on-primary font-label-md text-label-md rounded-xl font-bold flex items-center justify-center gap-space-xs shadow-md hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span> Gerar Cobrança Pix
+        </button>
+<button class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</aside>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm hidden transition-opacity" id="newStudentModal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl p-space-xl flex flex-col gap-space-lg max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider">
+            Nova Matrícula IsaDance
+          </div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Cadastrar Nova Aluna</h2>
+</div>
+<button class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="closeNewStudentModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-md" id="newStudentForm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nome Completo</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low border-none text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ex.: Marcela Rios Vasconcellos" required="" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">CPF</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="000.000.000-00" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Data de Nascimento</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" required="" type="date">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">WhatsApp de Contato</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="(11) 90000-0000" required="" type="tel">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Dia de Vencimento</label>
+<select class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none">
+<option value="05">Dia 05 de cada mês</option>
+<option value="10">Dia 10 de cada mês</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Modalidades Matriculadas</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-low">
+<label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
+<input checked="" class="accent-primary w-4 h-4" type="checkbox"> Ballet Clássico
+            </label>
+<label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
+<input class="accent-primary w-4 h-4" type="checkbox"> Jazz Contemporâneo
+            </label>
+<label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
+<input class="accent-primary w-4 h-4" type="checkbox"> Dança Urbana
+            </label>
+<label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
+<input class="accent-primary w-4 h-4" type="checkbox"> Dança de Salão
+            </label>
+<label class="flex items-center gap-2 text-body-sm font-body-sm cursor-pointer">
+<input class="accent-primary w-4 h-4" type="checkbox"> Dança do Ventre
+            </label>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Contato de Emergência (Nome &amp; Parentesco / Tel)</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ex.: Carla Rios (Mãe) - (11) 99882-1200" type="text">
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-md">
+<button class="h-11 px-space-lg rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" id="cancelModalBtn" type="button">
+            Cancelar
+          </button>
+<button class="h-11 px-space-xl rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container transition-all" type="submit">
+            Salvar e Ativar Matrícula
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const studentData = {
+      1: {
+        name: "Heloísa Fontes Ramos",
+        matricula: "MAT-2024-0089",
+        cpf: "398.241.908-11",
+        rg: "48.291.002-X SSP/SP",
+        dob: "14/03/2007 (17 anos)",
+        phone: "(11) 98452-1904",
+        addressStreet: "Alameda dos Jacarandás, 342 - Apto 51",
+        addressCity: "Bela Vista, São Paulo - SP, CEP 01311-000",
+        emergencyName: "Patrícia Fontes (Mãe)",
+        emergencyPhone: "(11) 98452-9900",
+        due: "Todo Dia 05",
+        tuition: "R$ 480,00",
+        medicalNotes: "Histórico de entorse leve no tornozelo direito (2023). Apta para ponta com aquecimento guiado prévio."
+      },
+      2: {
+        name: "Camila Duarte Nogueira",
+        matricula: "MAT-2023-0144",
+        cpf: "412.871.201-92",
+        rg: "39.412.019-1 SSP/SP",
+        dob: "28/09/2002 (22 anos)",
+        phone: "(11) 97114-8890",
+        addressStreet: "Rua Augusta, 1890 - Bloco B",
+        addressCity: "Consolação, São Paulo - SP, CEP 01305-100",
+        emergencyName: "Lucas Duarte (Irmão)",
+        emergencyPhone: "(11) 97722-1130",
+        due: "Todo Dia 10",
+        tuition: "R$ 310,00",
+        medicalNotes: "Nenhuma restrição cardiovascular ou articular relatada. Atestado cardiológico em dia."
+      },
+      3: {
+        name: "Rodrigo Alencar Mendes",
+        matricula: "MAT-2024-0211",
+        cpf: "290.155.672-04",
+        rg: "25.109.845-0 SSP/RJ",
+        dob: "19/07/1995 (29 anos)",
+        phone: "(11) 99182-3401",
+        addressStreet: "Av. Brigadeiro Luís Antônio, 2400",
+        addressCity: "Jardim Paulista, São Paulo - SP, CEP 01402-000",
+        emergencyName: "Renata Mendes (Esposa)",
+        emergencyPhone: "(11) 99182-5500",
+        due: "Todo Dia 05",
+        tuition: "R$ 520,00",
+        medicalNotes: "Acompanhamento lombar preventivo (fisioterapia). Evitar hiperextensão sem preparo."
+      },
+      4: {
+        name: "Yasmin Farah Haddad",
+        matricula: "MAT-2023-0052",
+        cpf: "331.984.771-30",
+        rg: "41.983.421-2 SSP/SP",
+        dob: "04/11/1998 (26 anos)",
+        phone: "(11) 98772-0012",
+        addressStreet: "Rua Vergueiro, 1290",
+        addressCity: "Vila Mariana, São Paulo - SP, CEP 04101-000",
+        emergencyName: "Samir Haddad (Pai)",
+        emergencyPhone: "(11) 98834-1188",
+        due: "Todo Dia 10",
+        tuition: "R$ 340,00",
+        medicalNotes: "Sem restrições ortopédicas. Praticante há 5 anos."
+      },
+      5: {
+        name: "Larissa Meirelles Rios",
+        matricula: "MAT-2024-0309",
+        cpf: "502.113.840-55",
+        rg: "55.849.201-9 SSP/SP",
+        dob: "02/02/2010 (14 anos)",
+        phone: "(11) 97410-9941",
+        addressStreet: "Rua Pamplona, 650",
+        addressCity: "Jardins, São Paulo - SP, CEP 01405-001",
+        emergencyName: "Mariana Meirelles (Mãe)",
+        emergencyPhone: "(11) 97410-8800",
+        due: "Todo Dia 05",
+        tuition: "R$ 360,00",
+        medicalNotes: "Alergia a pólen e poeira. Atestado médico entregue em Março/2024."
+      }
+    };
+
+    function updateDetails(studentId) {
+      const data = studentData[studentId];
+      if (!data) return;
+
+      document.getElementById("detailName").textContent = data.name;
+      document.getElementById("detailMatricula").textContent = data.matricula;
+      document.getElementById("detailCpf").textContent = data.cpf;
+      document.getElementById("detailRg").textContent = data.rg;
+      document.getElementById("detailDob").textContent = data.dob;
+      document.getElementById("detailAddressStreet").textContent = data.addressStreet;
+      document.getElementById("detailAddressCity").textContent = data.addressCity;
+      document.getElementById("detailEmergencyName").textContent = data.emergencyName;
+      document.getElementById("detailEmergencyPhone").textContent = data.emergencyPhone;
+      document.getElementById("detailDueDay").textContent = data.due;
+      document.getElementById("detailTuition").textContent = data.tuition;
+      document.getElementById("detailMedicalNotes").textContent = data.medicalNotes;
+    }
+
+    const rows = document.querySelectorAll("#studentRowsContainer tr");
+    rows.forEach(row => {
+      row.addEventListener("click", () => {
+        const id = row.getAttribute("data-student-id");
+        updateDetails(id);
+      });
+    });
+
+    const openBtns = document.querySelectorAll(".open-detail-btn");
+    openBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const targetId = btn.getAttribute("data-target");
+        updateDetails(targetId);
+      });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const dueFilter = document.getElementById("dueFilter");
+    const filterChips = document.querySelectorAll(".filter-chip");
+    let activeModality = "all";
+
+    function filterTable() {
+      const searchVal = searchInput.value.toLowerCase().trim();
+      const dueVal = dueFilter.value;
+      let visible = 0;
+
+      rows.forEach(row => {
+        const name = (row.getAttribute("data-name") || "").toLowerCase();
+        const cpf = (row.getAttribute("data-cpf") || "").toLowerCase();
+        const modalities = (row.getAttribute("data-modalities") || "").toLowerCase();
+        const due = row.getAttribute("data-due");
+
+        const matchesSearch = !searchVal || name.includes(searchVal) || cpf.includes(searchVal);
+        const matchesDue = dueVal === "all" || due === dueVal;
+        const matchesModality = activeModality === "all" || modalities.includes(activeModality);
+
+        if (matchesSearch && matchesDue && matchesModality) {
+          row.style.display = "";
+          visible++;
+        } else {
+          row.style.display = "none";
+        }
+      });
+
+      document.getElementById("visibleCount").textContent = visible;
+    }
+
+    searchInput.addEventListener("input", filterTable);
+    dueFilter.addEventListener("change", filterTable);
+
+    filterChips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        filterChips.forEach(c => {
+          c.classList.remove("bg-primary", "text-on-primary");
+          c.classList.add("bg-surface-container-low", "text-on-surface-variant");
+        });
+        chip.classList.remove("bg-surface-container-low", "text-on-surface-variant");
+        chip.classList.add("bg-primary", "text-on-primary");
+        activeModality = chip.getAttribute("data-modality");
+        filterTable();
+      });
+    });
+
+    const modal = document.getElementById("newStudentModal");
+    const openModalBtn = document.getElementById("openNewStudentModal");
+    const closeModalBtn = document.getElementById("closeNewStudentModal");
+    const cancelModalBtn = document.getElementById("cancelModalBtn");
+    const newStudentForm = document.getElementById("newStudentForm");
+
+    openModalBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    function hideModal() {
+      modal.classList.add("hidden");
+    }
+
+    closeModalBtn.addEventListener("click", hideModal);
+    cancelModalBtn.addEventListener("click", hideModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) hideModal();
+    });
+
+    newStudentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Matrícula cadastrada com sucesso no IsaDance Studio!");
+      hideModal();
+    });
+
+    const exportBtn = document.getElementById("exportBtn");
+    exportBtn.addEventListener("click", () => {
+      alert("Exportando lista completa de matriculados (.xlsx)...");
+    });
+  })();
+</script></main></div>
+
+
+
+<script src="assets/prototipo.js"></script></body></html>

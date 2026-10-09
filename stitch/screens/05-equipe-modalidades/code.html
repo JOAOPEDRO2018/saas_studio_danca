@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#efdee5",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#890a57",
+          "outline": "#887179",
+          "surface-container": "#f4ecee",
+          "surface-container-high": "#eee6e9",
+          "surface-bright": "#fff7fa",
+          "primary": "#981c63",
+          "surface": "#fff7fa",
+          "tertiary-fixed": "#ffd9e4",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd8db",
+          "on-secondary-fixed-variant": "#4f4449",
+          "secondary-fixed-dim": "#d2c2c9",
+          "on-tertiary-fixed": "#350c1f",
+          "on-error": "#ffffff",
+          "on-primary-container": "#ffe5ed",
+          "inverse-on-surface": "#f7eff1",
+          "background": "#fff7fa",
+          "secondary-container": "#efdee5",
+          "on-surface-variant": "#554149",
+          "on-background": "#1e1b1d",
+          "surface-container-low": "#f9f2f4",
+          "on-tertiary-fixed-variant": "#69374b",
+          "on-tertiary-container": "#ffe5ec",
+          "on-secondary-container": "#6d6167",
+          "on-surface": "#1e1b1d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#22191e",
+          "on-tertiary": "#ffffff",
+          "inverse-surface": "#332f31",
+          "inverse-primary": "#ffb0d0",
+          "on-primary-fixed": "#3d0024",
+          "surface-tint": "#a82b70",
+          "primary-fixed-dim": "#ffb0d0",
+          "primary-fixed": "#ffd8e6",
+          "tertiary-container": "#915a6f",
+          "tertiary-fixed-dim": "#f7b4cc",
+          "tertiary": "#764257",
+          "surface-container-highest": "#e8e1e3",
+          "error": "#ba1a1a",
+          "secondary": "#675b61",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "primary-container": "#b8387c",
+          "outline-variant": "dbbfc8",
+          "surface-variant": "#e8e1e3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(61,19,38,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">IsaDance</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio Manager</span></div></div><div class="w-2 h-2 rounded-full bg-primary/40"></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(61,19,38,0.04)] flex items-center gap-space-sm"><div class="relative"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold">IS</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Diretora Artística</span></div></div></div><nav class="px-space-sm py-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="visao-geral" href="#"><span class="font-label-lg text-label-lg">Visão Geral</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="alunos-matriculas" href="#"><span class="font-label-lg text-label-lg">Alunos &amp; Matrículas</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">248</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="grade-agenda-de-aulas" href="#"><span class="font-label-lg text-label-lg">Grade &amp; Agenda de Aulas</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all group bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="professores-modalidades" href="#"><span class="font-label-lg text-label-lg">Professores &amp; Modalidades</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="financeiro-mensalidades" href="#"><span class="font-label-lg text-label-lg">Financeiro &amp; Mensalidades</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-bold border border-rose-200">12 Pendentes</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="relatorios" href="#"><span class="font-label-lg text-label-lg">Relatórios</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="configuracoes-logs" href="#"><span class="font-label-lg text-label-lg">Configurações &amp; Logs</span></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-secondary-fixed/50 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary font-semibold font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">grade</span>Temporada de Festivais</div><p class="font-body-sm text-body-sm text-on-secondary-container leading-snug">Inscrições abertas para o Gala de Inverno 2025.</p></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(61,19,38,0.03)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Buscar alunas, turmas, modalidades ou recibos..." type="text"/></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-2 rounded-xl border border-outline-variant/30 shrink-0 text-on-surface"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">event</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-medium focus:outline-none cursor-pointer"><option>Novembro / 2024</option><option>Dezembro / 2024</option><option>Janeiro / 2025</option></select></div></div><div class="flex items-center gap-space-md"><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button></div><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UEopEuV_OhVlxZuzPEBJTqOyQPdYzwpUkOzqEOEc1aiaJXmDKyFz69I1yY97RKhT9b9b4uTThkDmkDjdVrlGbrIW0mUG-Gg3W4YL8_GjsqSXmb1efK-bnPQmmUKWev0sKa8dfUENoQaHoMJWfwhBV6nJMrZq52YVruJ5Xq02oun93UEm0r8MTD7eV3XNi7XqVZBNnGzUfJFtYS2yd7VN1lGH6RbL1SegqsqbEPXwR5lfhM6ShNSnXmPhi6"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Administradora</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="relative pt-20 w-full px-space-xl py-space-lg bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Control Bar / Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Gestão Artística &amp; Docência</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ciclo Letivo 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Equipe &amp; Modalidades</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Cadastre o corpo docente, gerencie vínculos artísticos e configure as diretrizes técnicas das modalidades de dança.</p>
+</div>
+<!-- Quick Action CTAs -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-secondary-container text-primary font-label-lg text-label-lg hover:bg-tertiary-fixed transition-all shadow-sm" id="btnOpenProfessorModal" onclick="openModal('modalProfessor')">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Novo Colaborador / Professor</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md" id="btnOpenModalityModal" onclick="openModal('modalModality')">
+<span class="material-symbols-outlined text-[20px]">category</span>
+<span>+ Nova Modalidade</span>
+</button>
+</div>
+</div>
+<!-- KPI Top Metrics (Refined Bento Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Corpo Docente &amp; Staff</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">colaboradores</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>8 professores lecionando nesta semana</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Modalidades Ativas</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">sports_kabaddi</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">12</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">estilos ofertados</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span>Ballet Clássico &amp; Jazz são os mais procurados</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Vínculos &amp; Turmas</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">calendar_view_week</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">28</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">turmas ativas</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>100% de cobertura com titulares e substitutos</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-outline"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Média por Modalidade</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">diversity_1</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">18.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">alunas / estilo</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>Taxa de ocupação média de 86% em estúdio</span>
+</div>
+</div>
+</div>
+<!-- Main Navigation Tabs: Equipe vs Modalidades -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center p-1 bg-surface-container-high rounded-xl self-start">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tabTeamBtn" onclick="switchView('team')">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Equipe &amp; Docentes (14)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface" id="tabModalitiesBtn" onclick="switchView('modalities')">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+<span>Modalidades de Dança (12)</span>
+</button>
+</div>
+<!-- Search & Filter Bar -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none shadow-sm" id="searchInput" onkeyup="filterItems()" placeholder="Filtrar por nome, cargo ou modalidade..." type="text"/>
+</div>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm focus:outline-none cursor-pointer" id="filterCategory" onchange="filterItems()">
+<option value="todos">Todos os Cargos / Níveis</option>
+<option value="professor">Professores / Docentes</option>
+<option value="coreografo">Coreógrafos</option>
+<option value="administrativo">Administrativo &amp; Recepção</option>
+</select>
+</div>
+</div>
+<!-- TAB VIEW 1: EQUIPE & PROFESSORES -->
+<div class="flex flex-col space-y-space-md" id="viewTeam">
+<!-- Team Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md">
+<!-- Member 1: Isabela Santos -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Isabela Santos" data-role="professor coreografo">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Portrait photo of a Brazilian professional ballet dancer and artistic director smiling gently, warm studio background with soft pink lighting, hair tied in a graceful sleek bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSmBV25Kh4w9gbM6ke1MPvwrXSxvC5gSJU3QmsMiIa9YpLfrIpDo55ZXF6N77hsLsait9YXnY8iGJxXpl_LHiNVuNqIMCdUg59E8Hml8cineY6f1-zbSoGBGZr_1LsfRT7nrYwUaYxVLSk3IeqvJPg219rLcGSnSNmnfxUyTMkF6h0ozgGq50gl8i__-HZZ7dYB2BX6I6aHr8gnLH_qGKuFqm8kzsrnIib3apPqLBc"/>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Isabela Santos</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Diretora Artística &amp; Maitresse</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DRT 14.892/SP • Royal Academy of Dance (RAD)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativa
+            </span>
+</div>
+<!-- Modalities Taught Tags -->
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Ballet Clássico Avançado</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Ponta &amp; Repertório</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Baby Class</span>
+</div>
+<!-- Contract & Compensation Summary -->
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Mensalista / R$ 6.400,00</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-primary font-bold">22 hrs / 6 turmas</span>
+</div>
+</div>
+</div>
+<!-- Footer / Contact Info & Actions -->
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 98452-1100</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Isabela Santos')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 2: Clara Martins -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Clara Martins" data-role="professor">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-[#d2649a]"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Close-up headshot of an expressive female jazz and contemporary dance teacher, energetic smile, studio rehearsal room with mirror reflection behind" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAN5mb_WRd8z8XylKNBb-oCW7hksVVm5_q-MtR_N8KYKCdlAfQCJKTZDv5QAMrhcNGLKNj-SyMrvI7IJqI-RfvRxW2dKTn6eWAUMjOVq8xdFQSzQTwHv1fi1-Efh_JBN5AmIySF8PnsCWKwzG-MgvUmUS-puoo3s5mSSHN_hUSTu54Oby80GgQlxy2jyAEduSnnRGjUJOTxJ-TaK0u_zdb6zbtbCH_Vx_U9ZFtmseB"/>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Clara Martins</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Professora de Jazz &amp; Lírico</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DRT 22.410/SP • Bacharel em Dança UNICAMP</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativa
+            </span>
+</div>
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Jazz Funk Contemporâneo</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Lírico Juvenil</span>
+</div>
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Horista / R$ 90,00 h/aula</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-primary font-bold">14 hrs / 4 turmas</span>
+</div>
+</div>
+</div>
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 97103-8821</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Clara Martins')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 3: Marcos Vinícius Ramos -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Marcos Vinícius Ramos" data-role="professor coreografo">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-[#764257]"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm" data-alt="Portrait of an athletic male hip hop and urban dance instructor wearing a clean dark streetwear hoodie in a sunlit modern dance studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSn5mYgbah_NNkA-xj2Us_C3ST4DELBUBeU2DFYIZYQsaaWebSny8yCJzuXkN0LTh_HE7uOFrJEUXbTtBhjfxilkUwscJrk1VVvU4YD_3q7ft28jXh31oyhKeyN2NMLNnINML7_pdFcYld8jQy8WHv6s6co_v8CJCZbz2bgYs7W6dS1QPhA2LIn8ra5N_AtKvsq_m4gBKlqYMzKFv9__lBNcgLHpQqnn6_7fOdGG0v"/>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Marcos Vinícius</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Instrutor de Danças Urbanas &amp; Hip Hop</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DRT 33.109/SP • Especialista em Danças Urbanas</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativo
+            </span>
+</div>
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Hip Hop Freestyle</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Breaking Kids</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Urban Choreo</span>
+</div>
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Horista / R$ 85,00 h/aula</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-primary font-bold">12 hrs / 3 turmas</span>
+</div>
+</div>
+</div>
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 96541-2993</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Marcos Vinícius')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 4: Juliana Vasconcelos -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Juliana Vasconcelos" data-role="professor">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-[#e08fb3]"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-primary font-bold text-headline-sm">JV</div>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Juliana Vasconcelos</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Professora Baby Class &amp; Infantil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DRT 19.340/SP • Pedagogia &amp; Dança Lúdica</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativa
+            </span>
+</div>
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Baby Class (3 a 5 anos)</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Iniciação ao Movimento</span>
+</div>
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Horista / R$ 80,00 h/aula</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-primary font-bold">16 hrs / 5 turmas</span>
+</div>
+</div>
+</div>
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 99882-3401</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Juliana Vasconcelos')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 5: Rodrigo Fontana -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Rodrigo Fontana" data-role="professor">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-[#a82b70]"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-primary font-bold text-headline-sm">RF</div>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Rodrigo Fontana</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Professor Dança de Salão &amp; Zouk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DRT 28.910/RJ • Danças a Dois &amp; Salsa</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativo
+            </span>
+</div>
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Zouk Brasileiro</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Samba de Gafieira</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Forró Universitário</span>
+</div>
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Comissão / 40% por aluno</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-primary font-bold">10 hrs / 3 turmas</span>
+</div>
+</div>
+</div>
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 98112-7090</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Rodrigo Fontana')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 6: Larissa Rezende (Recepção / Apoio) -->
+<div class="team-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden" data-name="Larissa Rezende" data-role="administrativo">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-outline"></div>
+<div>
+<div class="flex items-start justify-between gap-3 mb-space-sm pl-2">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant font-bold text-headline-sm">LR</div>
+<span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Larissa Rezende</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Atendimento &amp; Secretaria Escolar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gestão Administrativa &amp; Matrículas</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Ativa
+            </span>
+</div>
+<div class="pl-2 mt-2 mb-space-sm flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Recepção IsaDance</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Financeiro Balcão</span>
+</div>
+<div class="pl-2 p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contrato &amp; Valor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">CLT / R$ 3.200,00</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Carga Semanal</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">40 hrs semanais</span>
+</div>
+</div>
+</div>
+<div class="pl-2 pt-space-xs flex items-center justify-between border-t border-surface-container">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px]">call</span> (11) 94002-8922</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editProfessor('Larissa Rezende')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB VIEW 2: MODALIDADES DE DANÇA COM VINCULAÇÃO -->
+<div class="hidden flex flex-col space-y-space-md" id="viewModalities">
+<!-- Modalities Showcase Table / Card Strip Layout -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Header row -->
+<div class="grid grid-cols-12 gap-4 px-space-md py-3.5 bg-surface-container-high/60 text-on-surface-variant font-label-md text-label-md uppercase tracking-wider items-center">
+<div class="col-span-4">Modalidade &amp; Nível</div>
+<div class="col-span-3">Professores Vinculados</div>
+<div class="col-span-2 text-center">Turmas &amp; Vagas</div>
+<div class="col-span-2 text-right">Mensalidade Padrão</div>
+<div class="col-span-1 text-center">Ações</div>
+</div>
+<!-- Modality Row 1: Ballet Clássico Juvenil/Adulto -->
+<div class="modality-row grid grid-cols-12 gap-4 px-space-md py-space-sm hover:bg-surface-container-low transition-all items-center border-b border-surface-container" data-category="juvenil adulto" data-name="ballet classico">
+<div class="col-span-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Ballet Clássico &amp; Pontas</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Juvenil / Adulto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala 1 (Petit Ballet)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1 truncate">Uniforme: Collant Vinho IsaDance, Meia-calça Rosa Salmão, Sapatilha de Ponta</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Titular:</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md font-semibold">Profª Isabela Santos</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Substituta:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Profª Juliana Vasconcelos</span>
+</div>
+</div>
+<div class="col-span-2 text-center flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md font-bold text-on-surface">5 turmas</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-semibold">72 / 80 alunas (90%)</span>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div class="col-span-2 text-right flex flex-col justify-center">
+<span class="font-title-md text-title-md font-bold text-primary">R$ 310,00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2x semanais (3h/sem)</span>
+</div>
+<div class="col-span-1 flex items-center justify-center gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editModality('Ballet Clássico')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Modality Row 2: Jazz Funk Contemporâneo -->
+<div class="modality-row grid grid-cols-12 gap-4 px-space-md py-space-sm hover:bg-surface-container-low transition-all items-center border-b border-surface-container" data-category="juvenil" data-name="jazz funk contemporaneo">
+<div class="col-span-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">music_note</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Jazz Funk Contemporâneo</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Juvenil / Intermediário</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala 2 (Espelhos &amp; Som)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1 truncate">Uniforme: Top/Camiseta Preta Dry-Fit, Legging Flexível, Sapatilha Jazz</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Titular:</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-[#d2649a]"></span>
+<span class="font-label-md text-label-md font-semibold">Profª Clara Martins</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Substituto:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prof. Marcos Vinícius</span>
+</div>
+</div>
+<div class="col-span-2 text-center flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md font-bold text-on-surface">4 turmas</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-semibold">54 / 64 alunas (84%)</span>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+<div class="col-span-2 text-right flex flex-col justify-center">
+<span class="font-title-md text-title-md font-bold text-primary">R$ 280,00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2x semanais (2h/sem)</span>
+</div>
+<div class="col-span-1 flex items-center justify-center gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editModality('Jazz Funk')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Modality Row 3: Danças Urbanas & Hip Hop -->
+<div class="modality-row grid grid-cols-12 gap-4 px-space-md py-space-sm hover:bg-surface-container-low transition-all items-center border-b border-surface-container" data-category="livre" data-name="dancas urbanas hip hop">
+<div class="col-span-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Danças Urbanas &amp; Hip Hop</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Kids &amp; Juvenil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala 2 (Espelhos &amp; Som)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1 truncate">Uniforme: Moletom / Camiseta Over, Calça Cargo e Tênis Solado Reto</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Titular:</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-[#764257]"></span>
+<span class="font-label-md text-label-md font-semibold">Prof. Marcos Vinícius</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Substituta:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Profª Clara Martins</span>
+</div>
+</div>
+<div class="col-span-2 text-center flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md font-bold text-on-surface">3 turmas</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-semibold">41 / 48 alunas (85%)</span>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<div class="col-span-2 text-right flex flex-col justify-center">
+<span class="font-title-md text-title-md font-bold text-primary">R$ 260,00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2x semanais (2h/sem)</span>
+</div>
+<div class="col-span-1 flex items-center justify-center gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editModality('Danças Urbanas')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Modality Row 4: Baby Class -->
+<div class="modality-row grid grid-cols-12 gap-4 px-space-md py-space-sm hover:bg-surface-container-low transition-all items-center" data-category="infantil" data-name="baby class iniciacao">
+<div class="col-span-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed-dim flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">child_care</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Baby Class &amp; Iniciação</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Infantil (3 a 6 anos)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala 3 (Lúdica - Tatame &amp; Espelhos)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1 truncate">Uniforme: Saia Tutu Rosa Clara, Meia Branca com Sapatilha de Pano</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Titular:</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-[#e08fb3]"></span>
+<span class="font-label-md text-label-md font-semibold">Profª Juliana Vasconcelos</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Substituta:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Profª Isabela Santos</span>
+</div>
+</div>
+<div class="col-span-2 text-center flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md font-bold text-on-surface">5 turmas</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-semibold">60 / 60 alunas (100% LOTADO)</span>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-emerald-600 h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div class="col-span-2 text-right flex flex-col justify-center">
+<span class="font-title-md text-title-md font-bold text-primary">R$ 290,00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2x semanais (1h30/sem)</span>
+</div>
+<div class="col-span-1 flex items-center justify-center gap-1">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" onclick="editModality('Baby Class')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 1: CADASTRO / EDIÇÃO DE NOVO COLABORADOR / PROFESSOR -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-[#1e1b1d]/40 backdrop-blur-sm flex items-center justify-center hidden p-space-md" id="modalProfessor">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl w-full max-w-3xl max-h-[921px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalProfessorTitle">Cadastrar Novo Colaborador / Professor</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Preencha os dados contratuais, artísticos e de acesso do docente</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-all" onclick="closeModal('modalProfessor')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Formulário Completo) -->
+<div class="p-space-lg overflow-y-auto space-y-space-md flex-1">
+<!-- Linha 1: Nome Completo e CPF -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Nome Completo *</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profNome" placeholder="Ex: Mariana Silveira Cavalcanti" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">CPF *</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profCpf" placeholder="000.000.000-00" type="text"/>
+</div>
+</div>
+<!-- Linha 2: E-mail, Celular/WhatsApp e Data de Nascimento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">E-mail Profissional *</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profEmail" placeholder="docente@isadancestudio.com.br" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">WhatsApp / Celular *</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profTel" placeholder="(11) 98765-4321" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Data de Nascimento</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profNasc" type="date"/>
+</div>
+</div>
+<!-- Linha 3: Perfil/Cargo e DRT / Registro Profissional -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Cargo / Perfil Artístico *</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="profCargo">
+<option value="Professor de Dança">Professor / Instrutor de Dança</option>
+<option value="Coreógrafo Residente">Coreógrafo Residente</option>
+<option value="Maitresse / Ensaiador">Maitresse / Ensaiador</option>
+<option value="Coordenação Pedagógica">Coordenação Pedagógica</option>
+<option value="Secretaria / Atendimento">Secretaria / Atendimento ao Aluno</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Registro DRT / Formação Acadêmica</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profDrt" placeholder="Ex: DRT 23.491/SP • Royal Academy of Dance" type="text"/>
+</div>
+</div>
+<!-- Linha 4: Modalidades que Leciona (Tags selecionáveis) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Modalidades que Leciona (Selecione múltiplas):</label>
+<div class="flex flex-wrap gap-2" id="profModalitiesList">
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Ballet Clássico</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Jazz Funk</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Danças Urbanas</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Baby Class</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Zouk &amp; Salão</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Contemporâneo</button>
+<button class="tag-modality px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-container transition-all" onclick="toggleTag(this)" type="button">Sapateado Americano</button>
+</div>
+</div>
+<!-- Linha 5: Tipo de Contrato, Remuneração e Cor na Agenda -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Tipo de Contrato *</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="profContrato">
+<option value="Horista">Horista (por hora/aula)</option>
+<option value="Mensalista">Mensalista CLT</option>
+<option value="PJ">Prestador de Serviços (PJ)</option>
+<option value="Comissao">Comissão por Aluna Matriculada</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Valor Remuneração (R$)</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="profValor" placeholder="Ex: R$ 85,00 ou R$ 4.500,00" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Cor na Grade / Agenda</label>
+<div class="flex items-center gap-2 h-10">
+<input class="w-10 h-10 rounded-lg cursor-pointer border-0 bg-transparent" id="profColor" type="color" value="#b8387c"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Destaque visual nas salas</span>
+</div>
+</div>
+</div>
+<!-- Linha 6: Permissões de Acesso ao Sistema -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acesso ao IsaDance App &amp; Diário de Classe</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permite lançar chamadas, notas pedagógicas e recados às alunas</span>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all" onclick="closeModal('modalProfessor')">Cancelar</button>
+<button class="px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-bold hover:bg-primary transition-all shadow-md flex items-center gap-1.5" onclick="saveProfessor()">
+<span class="material-symbols-outlined text-[18px]">check</span> Salvar Colaborador
+        </button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: CADASTRO / EDIÇÃO DE NOVA MODALIDADE VINCULANDO PROFESSORES -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-[#1e1b1d]/40 backdrop-blur-sm flex items-center justify-center hidden p-space-md" id="modalModality">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl w-full max-w-3xl max-h-[921px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">category</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalModalityTitle">Cadastrar Nova Modalidade de Dança</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Configure os parâmetros técnicos, pedagógicos e vincule os docentes responsáveis</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-all" onclick="closeModal('modalModality')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg overflow-y-auto space-y-space-md flex-1">
+<!-- Linha 1: Nome e Categoria / Faixa Etária -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Nome da Modalidade *</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="modName" placeholder="Ex: Dança Contemporânea, Sapateado ou Jazz Funk" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Categoria / Faixa Etária *</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="modCategory">
+<option value="infantil">Infantil (3 a 6 anos)</option>
+<option value="kids">Kids &amp; Pré-Juvenil (7 a 11 anos)</option>
+<option value="juvenil">Juvenil (12 a 16 anos)</option>
+<option value="adulto_iniciante">Adulto Iniciante</option>
+<option value="avancado">Avançado / Profissional</option>
+</select>
+</div>
+</div>
+<!-- Linha 2: VINCULAÇÃO DE PROFESSORES (Titular & Substituto) -->
+<div class="p-space-md bg-secondary-container/40 rounded-xl space-y-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">link</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Vincular Docentes Responsáveis</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Professor(a) Titular Responsável *</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="modTitular">
+<option value="Isabela Santos">Profª Isabela Santos (Ballet / Maitresse)</option>
+<option value="Clara Martins">Profª Clara Martins (Jazz / Lírico)</option>
+<option value="Marcos Vinicius">Prof. Marcos Vinícius (Urbanas &amp; Hip Hop)</option>
+<option value="Juliana Vasconcelos">Profª Juliana Vasconcelos (Baby Class)</option>
+<option value="Rodrigo Fontana">Prof. Rodrigo Fontana (Salão &amp; Zouk)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Professor(a) Substituto(a) / Co-docente</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="modSubstituto">
+<option value="Nenhum">Nenhum definido</option>
+<option value="Isabela Santos">Profª Isabela Santos</option>
+<option selected="" value="Clara Martins">Profª Clara Martins</option>
+<option value="Marcos Vinicius">Prof. Marcos Vinícius</option>
+<option value="Juliana Vasconcelos">Profª Juliana Vasconcelos</option>
+<option value="Rodrigo Fontana">Prof. Rodrigo Fontana</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Linha 3: Capacidade Máxima, Sala Recomendada e Valor da Mensalidade -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Capacidade por Turma (Vagas)</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="modCapacidade" max="50" min="1" type="number" value="16"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Sala Recomendada</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none cursor-pointer" id="modSala">
+<option value="Sala 1">Sala 1 - Petit Ballet (Piso Flutuante)</option>
+<option value="Sala 2">Sala 2 - Espelhos &amp; Som (Linóleo)</option>
+<option value="Sala 3">Sala 3 - Lúdica Tatame Infantil</option>
+<option value="Sala 4">Sala 4 - Palco / Ensaios Gerais</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Mensalidade Sugerida (R$)</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="modValor" placeholder="Ex: R$ 290,00" type="text"/>
+</div>
+</div>
+<!-- Linha 4: Requisitos de Uniforme / Vestimenta -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Diretrizes de Uniforme / Indumentária Oficial</label>
+<textarea class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm ring-1 ring-surface-container-highest focus:ring-2 focus:ring-primary focus:outline-none" id="modUniforme" placeholder="Ex: Collant bordô oficial IsaDance, meia de compressão, sapatilha meia-ponta e coque alto com rede." rows="2"></textarea>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all" onclick="closeModal('modalModality')">Cancelar</button>
+<button class="px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-bold hover:bg-primary transition-all shadow-md flex items-center gap-1.5" onclick="saveModality()">
+<span class="material-symbols-outlined text-[18px]">done_all</span> Salvar e Publicar Modalidade
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast (Feedback de Ação) -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-xl flex items-center gap-space-sm hidden transition-all" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toastMessage">Operação realizada com sucesso!</span>
+</div>
+</div>
+<script>
+  // Tab Switcher Logic
+  function switchView(view) {
+    const teamBtn = document.getElementById('tabTeamBtn');
+    const modalityBtn = document.getElementById('tabModalitiesBtn');
+    const viewTeam = document.getElementById('viewTeam');
+    const viewModalities = document.getElementById('viewModalities');
+
+    if (view === 'team') {
+      viewTeam.classList.remove('hidden');
+      viewModalities.classList.add('hidden');
+      teamBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      teamBtn.classList.remove('text-on-surface-variant');
+      modalityBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      modalityBtn.classList.add('text-on-surface-variant');
+    } else {
+      viewTeam.classList.add('hidden');
+      viewModalities.classList.remove('hidden');
+      modalityBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      modalityBtn.classList.remove('text-on-surface-variant');
+      teamBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      teamBtn.classList.add('text-on-surface-variant');
+    }
+  }
+
+  // Modals management
+  function openModal(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  }
+
+  // Tag Toggling for Modalities
+  function toggleTag(btn) {
+    if (btn.classList.contains('bg-primary-container')) {
+      btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    } else {
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      btn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+    }
+  }
+
+  // Toast Trigger
+  function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    toastMsg.innerText = msg;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 3800);
+  }
+
+  // Save Operations
+  function saveProfessor() {
+    closeModal('modalProfessor');
+    showToast('Colaborador / Professor cadastrado com sucesso no IsaDance Studio!');
+  }
+
+  function saveModality() {
+    closeModal('modalModality');
+    showToast('Modalidade criada e vinculada aos professores com sucesso!');
+  }
+
+  // Edit triggers
+  function editProfessor(name) {
+    document.getElementById('modalProfessorTitle').innerText = 'Editar Registro de: ' + name;
+    document.getElementById('profNome').value = name;
+    openModal('modalProfessor');
+  }
+
+  function editModality(name) {
+    document.getElementById('modalModalityTitle').innerText = 'Editar Modalidade: ' + name;
+    document.getElementById('modName').value = name;
+    openModal('modalModality');
+  }
+
+  // Search & Filters
+  function filterItems() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const cat = document.getElementById('filterCategory').value;
+
+    const cards = document.querySelectorAll('.team-card');
+    cards.forEach(card => {
+      const name = (card.getAttribute('data-name') || '').toLowerCase();
+      const role = (card.getAttribute('data-role') || '').toLowerCase();
+      const matchQuery = name.includes(query) || role.includes(query);
+      const matchCat = cat === 'todos' || role.includes(cat);
+
+      if (matchQuery && matchCat) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const rows = document.querySelectorAll('.modality-row');
+    rows.forEach(row => {
+      const name = (row.getAttribute('data-name') || '').toLowerCase();
+      if (name.includes(query)) {
+        row.style.display = 'grid';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+</script></main></div></body></html>

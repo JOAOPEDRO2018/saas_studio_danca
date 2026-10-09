@@ -1,0 +1,1069 @@
+<!DOCTYPE html><html lang="pt-BR" style="width: 1280px; height: 1766px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#efdee5",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#890a57",
+          "outline": "#887179",
+          "surface-container": "#f4ecee",
+          "surface-container-high": "#eee6e9",
+          "surface-bright": "#fff7fa",
+          "primary": "#981c63",
+          "surface": "#fff7fa",
+          "tertiary-fixed": "#ffd9e4",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd8db",
+          "on-secondary-fixed-variant": "#4f4449",
+          "secondary-fixed-dim": "#d2c2c9",
+          "on-tertiary-fixed": "#350c1f",
+          "on-error": "#ffffff",
+          "on-primary-container": "#ffe5ed",
+          "inverse-on-surface": "#f7eff1",
+          "background": "#fff7fa",
+          "secondary-container": "#efdee5",
+          "on-surface-variant": "#554149",
+          "on-background": "#1e1b1d",
+          "surface-container-low": "#f9f2f4",
+          "on-tertiary-fixed-variant": "#69374b",
+          "on-tertiary-container": "#ffe5ec",
+          "on-secondary-container": "#6d6167",
+          "on-surface": "#1e1b1d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#22191e",
+          "on-tertiary": "#ffffff",
+          "inverse-surface": "#332f31",
+          "inverse-primary": "#ffb0d0",
+          "on-primary-fixed": "#3d0024",
+          "surface-tint": "#a82b70",
+          "primary-fixed-dim": "#ffb0d0",
+          "primary-fixed": "#ffd8e6",
+          "tertiary-container": "#915a6f",
+          "tertiary-fixed-dim": "#f7b4cc",
+          "tertiary": "#764257",
+          "surface-container-highest": "#e8e1e3",
+          "error": "#ba1a1a",
+          "secondary": "#675b61",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "primary-container": "#b8387c",
+          "outline-variant": "dbbfc8",
+          "surface-variant": "#e8e1e3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(61,19,38,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">IsaDance</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio Manager</span></div></div><div class="w-2 h-2 rounded-full bg-primary/40"></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(61,19,38,0.04)] flex items-center gap-space-sm"><div class="relative"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold">IS</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Diretora Artística</span></div></div></div><nav class="px-space-sm py-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="visao-geral" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">grid_view</span><span class="font-label-lg text-label-lg">Visão Geral</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="alunos-matriculas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">group</span><span class="font-label-lg text-label-lg">Alunos &amp; Matrículas</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">248</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="grade-agenda-de-aulas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">calendar_month</span><span class="font-label-lg text-label-lg">Grade &amp; Agenda de Aulas</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="financeiro-mensalidades" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">payments</span><span class="font-label-lg text-label-lg">Financeiro &amp; Mensalidades</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-bold border border-rose-200">12 Pendentes</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="relatorios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">query_stats</span><span class="font-label-lg text-label-lg">Relatórios</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="configuracoes-logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">tune</span><span class="font-label-lg text-label-lg">Configurações &amp; Logs</span></div></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-secondary-fixed/50 flex flex-col gap-space-xs"></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(61,19,38,0.03)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Buscar alunas, turmas, modalidades ou recibos..." type="text"></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-2 rounded-xl border border-outline-variant/30 shrink-0 text-on-surface"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">event</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-medium focus:outline-none cursor-pointer"><option>Novembro / 2024</option><option>Dezembro / 2024</option><option>Janeiro / 2025</option></select></div></div><div class="flex items-center gap-space-md"><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button></div><div class="relative"><button class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UEopEuV_OhVlxZuzPEBJTqOyQPdYzwpUkOzqEOEc1aiaJXmDKyFz69I1yY97RKhT9b9b4uTThkDmkDjdVrlGbrIW0mUG-Gg3W4YL8_GjsqSXmb1efK-bnPQmmUKWev0sKa8dfUENoQaHoMJWfwhBV6nJMrZq52YVruJ5Xq02oun93UEm0r8MTD7eV3XNi7XqVZBNnGzUfJFtYS2yd7VN1lGH6RbL1SegqsqbEPXwR5lfhM6ShNSnXmPhi6"><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Isabela Santos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Administradora</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="relative pt-20 w-full px-space-xl py-space-lg bg-surface flex-1"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Operational Banner & Rule Notice -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md p-space-md bg-secondary-fixed/40 rounded-xl shadow-sm">
+<div class="flex items-start lg:items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Política de Cobrança &amp; Mensalidades</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase">Ativa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Ciclos contratuais com vencimento padrão nos dias <strong>05</strong> e <strong>10</strong>. Atraso incide em <strong>Multa fixa de 2,0%</strong> + <strong>Juros diários de 0,33% ao dia</strong> calculados dinamicamente.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto shrink-0">
+<button class="px-space-md py-2 bg-surface-container-lowest text-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" onclick="toggleRuleConfigModal()">
+<span class="material-symbols-outlined text-[18px]">settings_suggest</span>
+        Ajustar Taxas
+      </button>
+<button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:opacity-95 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Lançar Mensalidade
+      </button>
+</div>
+</div>
+<!-- KPI Metrics Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Previsto -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-primary/5 transition-transform group-hover:scale-125"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Total Previsto (Mês)</span>
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance_wallet</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">R$ 38.450<span class="font-headline-sm text-headline-sm text-on-surface-variant font-medium">,00</span></span>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold text-primary">164 mensalidades</span>
+<span class="font-body-sm text-body-sm">· Ciclo Nov/2024</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+</div>
+<!-- Recebido -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-emerald-500/10 transition-transform group-hover:scale-125"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Total Recebido</span>
+<div class="w-7 h-7 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col">
+<span class="font-display-lg text-display-lg text-emerald-800 font-bold tracking-tight">R$ 29.800<span class="font-headline-sm text-headline-sm text-emerald-700/70 font-medium">,00</span></span>
+<div class="flex items-center gap-1 mt-1 text-emerald-700">
+<span class="font-label-sm text-label-sm font-semibold">77.5% liquidado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">· 128 quitadas</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-emerald-600 h-full w-[77.5%] rounded-full"></div>
+</div>
+</div>
+<!-- Em Aberto No Prazo -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-amber-500/10 transition-transform group-hover:scale-125"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Em Aberto (No Prazo)</span>
+<div class="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col">
+<span class="font-display-lg text-display-lg text-amber-900 font-bold tracking-tight">R$ 4.250<span class="font-headline-sm text-headline-sm text-amber-800/70 font-medium">,00</span></span>
+<div class="flex items-center gap-1 mt-1 text-amber-800">
+<span class="font-label-sm text-label-sm font-semibold">22 alunas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">· A vencer prox. dia 10</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-amber-500 h-full w-[11%] rounded-full"></div>
+</div>
+</div>
+<!-- Alerta Crítico: Inadimplência -->
+<div class="p-space-lg bg-rose-50/80 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-rose-200/50 transition-transform group-hover:scale-125"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+          Total em Atraso Crítico
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm animate-pulse">14 Faturas</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<span class="font-display-lg text-display-lg text-error font-bold tracking-tight">R$ 4.400<span class="font-headline-sm text-headline-sm text-error/70 font-medium">,00</span></span>
+<div class="flex items-center gap-1 mt-1 text-error">
+<span class="font-label-sm text-label-sm font-bold">+ R$ 394,40 em multas e juros</span>
+</div>
+</div>
+<div class="w-full bg-rose-200 h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-error h-full w-[11.5%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Operational Filter Strip & Quick Cohorts -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<!-- Day Cycle Filters -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<button class="filter-tab px-space-md py-2 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 text-on-surface-variant" id="btn-filter-all" onclick="setFilter('all')">
+<span class="">Todas as Mensalidades</span>
+<span class="px-2 py-0.5 text-xs rounded-full bg-surface-container-lowest/30">164</span>
+</button>
+<button class="filter-tab px-space-md py-2 rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-all flex items-center gap-2 text-on-surface-variant" id="btn-filter-venc05" onclick="setFilter('venc05')">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span class="">Vencimento Dia 05</span>
+<span class="px-2 py-0.5 text-xs rounded-full bg-secondary-fixed text-primary font-bold">88</span>
+</button>
+<button class="filter-tab px-space-md py-2 rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-all flex items-center gap-2 text-on-surface-variant" id="btn-filter-venc10" onclick="setFilter('venc10')">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span class="">Vencimento Dia 10</span>
+<span class="px-2 py-0.5 text-xs rounded-full bg-secondary-fixed text-primary font-bold">76</span>
+</button>
+<div class="h-6 w-px bg-surface-container-high mx-1 hidden sm:block"></div>
+<button class="filter-tab px-space-md py-2 rounded-lg font-label-md text-label-md font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 transition-all flex items-center gap-2 bg-primary-container text-on-primary-container font-semibold" id="btn-filter-inadimplente" onclick="setFilter('inadimplente')">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="">Apenas Inadimplentes</span>
+<span class="px-2 py-0.5 text-xs rounded-full bg-rose-200 text-rose-900 font-bold">14</span>
+</button>
+</div>
+<!-- Batch / Export Quick Tools -->
+<div class="flex items-center gap-space-xs self-end lg:self-auto shrink-0">
+<div class="relative">
+<input class="h-9 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner w-56 lg:w-64" id="studentSearch" onkeyup="filterStudents()" placeholder="Filtrar por nome ou turma..." type="text">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all flex items-center gap-1.5" onclick="triggerBulkReminder()" title="Disparar lembrete em massa para pendências">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span class="">Disparar WhatsApp (14)</span>
+</button>
+<button class="h-9 w-9 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high flex items-center justify-center transition-all" title="Exportar Relatório Financeiro">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- Main Financial Data Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="financialTable">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md font-bold">Aluna &amp; Matrícula</th>
+<th class="py-3.5 px-space-md font-bold">Turma / Modalidade</th>
+<th class="py-3.5 px-space-md font-bold">Vencimento</th>
+<th class="py-3.5 px-space-md font-bold text-center">Dias Atraso</th>
+<th class="py-3.5 px-space-md font-bold text-right">Valor Base</th>
+<th class="py-3.5 px-space-md font-bold text-right">Multa + Juros</th>
+<th class="py-3.5 px-space-md font-bold text-right">Total Atual</th>
+<th class="py-3.5 px-space-md font-bold text-center">Status</th>
+<th class="py-3.5 px-space-md font-bold text-center">Ações Rápidas</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-sm font-body-sm text-on-surface" id="tableBody">
+<!-- Row 1: Overdue Dia 05 (High Delay) -->
+<tr class="hover:bg-rose-50/40 transition-colors group" data-category="inadimplente" data-student="beatriz mendonca ballet ponta" data-venc="venc05">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  BM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Beatriz Mendonça</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-089 · Resp: Carla M.</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ballet Clássico Ponta III</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Cisne · Ter/Qui 18h</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+                05/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 font-label-sm text-label-sm font-bold inline-flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                18 dias
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 320,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-rose-700 font-bold">
+              + R$ 25,40
+              <div class="text-[10px] text-rose-600 font-normal">2% + (18d x 0,33%)</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-bold text-rose-900 text-title-md font-title-md">
+              R$ 345,40
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-label-sm text-label-sm font-bold">
+                Em Atraso
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="flex items-center justify-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 flex items-center justify-center transition-all" href="https://wa.me/5511999998888?text=Ola%20Carla%2C%20constatamos%20a%20mensalidade%20de%20Beatriz%20no%20IsaDance%20vencida%20em%2005%2F11%20com%20multa%20total%20R%24%20345%2C40.%20Deseja%20o%20PIX%3F" target="_blank" title="Cobrar pelo WhatsApp com mensagem pronta">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-secondary-fixed flex items-center justify-center transition-all" onclick="copyPix('00020126580014br.gov.bcb.pix0136isadance-beatriz-345405204000053039865802BR5909ISADANCE6009SAOPAULO62070503***6304E7A2')" title="Copiar PIX Copia e Cola">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1" onclick="openPaymentModal('Beatriz Mendonça', '345.40', 'Ballet Clássico Ponta III', '05/11/2024')" title="Dar baixa manual com comprovante">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Baixa</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Overdue Dia 10 (Moderate Delay) -->
+<tr class="hover:bg-rose-50/40 transition-colors group" data-category="inadimplente" data-student="sofia albuquerque jazz contemporaneo" data-venc="venc10">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  SA
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Sofia Albuquerque</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-112 · Resp: Marcos A.</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Jazz Juvenil Intermediário</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Aurora · Seg/Qua 16h30</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+                10/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 font-label-sm text-label-sm font-bold inline-flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                13 dias
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 290,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-rose-700 font-bold">
+              + R$ 18,24
+              <div class="text-[10px] text-rose-600 font-normal">2% + (13d x 0,33%)</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-bold text-rose-900 text-title-md font-title-md">
+              R$ 308,24
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-label-sm text-label-sm font-bold">
+                Em Atraso
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="flex items-center justify-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 flex items-center justify-center transition-all" href="https://wa.me/5511988887777?text=Ola%20Marcos%2C%20mensalidade%20de%20Sofia%20vencida%20em%2010%2F11%20no%20IsaDance.%20Total%20atualizado%20com%20juros%3A%20R%24%20308%2C24." target="_blank" title="Cobrar pelo WhatsApp">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-secondary-fixed flex items-center justify-center transition-all" onclick="copyPix('00020126580014br.gov.bcb.pix0136isadance-sofia-308245204000053039865802BR5909ISADANCE6009SAOPAULO62070503***6304AF90')" title="Copiar PIX Copia e Cola">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1" onclick="openPaymentModal('Sofia Albuquerque', '308.24', 'Jazz Juvenil Intermediário', '10/11/2024')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Baixa</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Overdue Dia 05 (High Delay) -->
+<tr class="hover:bg-rose-50/40 transition-colors group" data-category="inadimplente" data-student="valentina ribeiro baby class ballet" data-venc="venc05">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  VR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Valentina Ribeiro</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-044 · Resp: Patricia R.</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Baby Class I (4 a 5 anos)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Pétala · Sábados 09h</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+                05/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 font-label-sm text-label-sm font-bold inline-flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                18 dias
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 260,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-rose-700 font-bold">
+              + R$ 20,64
+              <div class="text-[10px] text-rose-600 font-normal">2% + (18d x 0,33%)</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-bold text-rose-900 text-title-md font-title-md">
+              R$ 280,64
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-label-sm text-label-sm font-bold">
+                Em Atraso
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="flex items-center justify-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 flex items-center justify-center transition-all" href="https://wa.me/5511977776666?text=Ola%20Patricia%2C%20mensalidade%20de%20Valentina%20no%20IsaDance%20vencida%20em%2005%2F11.%20Valor%20atualizado%3A%20R%24%20280%2C64." target="_blank" title="Cobrar pelo WhatsApp">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-secondary-fixed flex items-center justify-center transition-all" onclick="copyPix('00020126580014br.gov.bcb.pix0136isadance-valentina-280645204000053039865802BR5909ISADANCE6009SAOPAULO62070503***6304C10B')" title="Copiar PIX Copia e Cola">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1" onclick="openPaymentModal('Valentina Ribeiro', '280.64', 'Baby Class I', '05/11/2024')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Baixa</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Paid Dia 05 -->
+<tr class="hover:bg-surface-container-low transition-colors group" data-category="pago" data-student="laura farias danca contemporanea" data-venc="venc05" style="display: none;">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  LF
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Laura Farias</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-019 · Própria aluna</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dança Contemporânea Adulto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Étoile · Ter/Qui 19h30</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">event</span>
+                05/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="text-on-surface-variant text-label-sm font-label-sm">Pago no prazo</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 310,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-on-surface-variant">
+              R$ 0,00
+            </td>
+<td class="py-3.5 px-space-md text-right font-bold text-on-surface text-title-md font-title-md">
+              R$ 310,00
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Pago via PIX
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-all inline-flex items-center gap-1" onclick="viewReceipt('REC-2024-8841', 'Laura Farias', 'R$ 310,00', '04/11/2024')">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+                Recibo
+              </button>
+</td>
+</tr>
+<!-- Row 5: Pending Dia 10 (Within grace/on schedule) -->
+<tr class="hover:bg-amber-50/40 transition-colors group" data-category="pendente" data-student="clara vasconcelos sapateado americano" data-venc="venc10" style="display: none;">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  CV
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Clara Vasconcelos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-203 · Resp: Helena V.</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sapateado Americano I</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Aurora · Seg/Sex 17h</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-amber-900">
+<span class="material-symbols-outlined text-[16px] text-amber-700">event</span>
+                10/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 font-label-sm text-label-sm font-medium">
+                Pendente (Aguardando)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 280,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-on-surface-variant">
+              R$ 0,00
+            </td>
+<td class="py-3.5 px-space-md text-right font-bold text-on-surface text-title-md font-title-md">
+              R$ 280,00
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-amber-100/70 text-amber-800 font-label-sm text-label-sm font-bold">
+                Pendente
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="flex items-center justify-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 flex items-center justify-center transition-all" href="https://wa.me/5511966665555?text=Ola%20Helena%2C%20lembrete%20gentil%20do%20IsaDance%20sobre%20a%20mensalidade%20de%20Clara%20com%20vencimento%20dia%2010.%20Chave%20PIX%3A%20contato%40isadance.com.br" target="_blank" title="Lembrete Preventivo">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-secondary-fixed flex items-center justify-center transition-all" onclick="copyPix('00020126580014br.gov.bcb.pix0136isadance-clara-280005204000053039865802BR5909ISADANCE6009SAOPAULO62070503***630489AB')" title="Copiar PIX">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1" onclick="openPaymentModal('Clara Vasconcelos', '280.00', 'Sapateado Americano I', '10/11/2024')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Baixa</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Overdue Dia 10 (Moderate Delay) -->
+<tr class="hover:bg-rose-50/40 transition-colors group" data-category="inadimplente" data-student="manuela pires flexibilidade danca" data-venc="venc10">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md font-bold flex items-center justify-center shrink-0">
+                  MP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Manuela Pires</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula #2024-177 · Resp: Renata P.</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Alongamento &amp; Flexibilidade</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sala Étoile · Quarta 18h</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+                10/11/2024
+              </div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 font-label-sm text-label-sm font-bold inline-flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                13 dias
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-medium text-on-surface-variant">
+              R$ 210,00
+            </td>
+<td class="py-3.5 px-space-md text-right text-rose-700 font-bold">
+              + R$ 13,21
+              <div class="text-[10px] text-rose-600 font-normal">2% + (13d x 0,33%)</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-bold text-rose-900 text-title-md font-title-md">
+              R$ 223,21
+            </td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-label-sm text-label-sm font-bold">
+                Em Atraso
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<div class="flex items-center justify-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 flex items-center justify-center transition-all" href="https://wa.me/5511955554444?text=Ola%20Renata%2C%20mensalidade%20de%20Manuela%20vencida%20em%2010%2F11.%20Valor%20total%20com%20taxa%20e%20juros%3A%20R%24%20223%2C21." target="_blank" title="Cobrar via WhatsApp">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-secondary-fixed flex items-center justify-center transition-all" onclick="copyPix('00020126580014br.gov.bcb.pix0136isadance-manuela-223215204000053039865802BR5909ISADANCE6009SAOPAULO62070503***63047D4C')" title="Copiar PIX">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1" onclick="openPaymentModal('Manuela Pires', '223.21', 'Alongamento &amp; Flexibilidade', '10/11/2024')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Baixa</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination & Summary -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="">Exibindo faturas de <strong>Novembro / 2024</strong></span>
+<span class="">·</span>
+<span class="text-primary font-semibold">14 inadimplentes selecionáveis para régua automática</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium transition-all shadow-sm">Anterior</button>
+<span class="px-2 font-label-sm text-label-sm font-bold text-primary">Pág 1 de 3</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium transition-all shadow-sm">Próxima</button>
+</div>
+</div>
+</div>
+<!-- Lower Section: Analytical Cohort & Financial Rhythm Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Visual Distribution Chart & Schedule Cohort Breakdown -->
+<div class="lg:col-span-2 p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Distribuição por Ciclo de Vencimento</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Comparativo de adimplência entre o corte do Dia 05 e Dia 10</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-label-sm text-label-sm font-semibold">Nov/2024</span>
+</div>
+<!-- Custom Inline SVG Chart Graphic -->
+<div class="w-full flex flex-col gap-space-md my-space-sm">
+<!-- Dia 05 Bar Row -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+              Ciclo Vencimento Dia 05 (Total R$ 20.950,00)
+            </span>
+<span class="text-on-surface-variant">88 alunas · 92% arrecadado</span>
+</div>
+<div class="w-full h-4 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="bg-emerald-600 h-full w-[84%]" title="Recebido R$ 17.598,00"></div>
+<div class="bg-amber-400 h-full w-[4%]" title="Em Aberto R$ 838,00"></div>
+<div class="bg-rose-500 h-full w-[12%]" title="Em Atraso R$ 2.514,00"></div>
+</div>
+<div class="flex items-center gap-space-md text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-600"></span> Pago: R$ 17.598,00</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span> A Vencer: R$ 838,00</span>
+<span class="flex items-center gap-1 text-rose-700 font-semibold"><span class="w-2 h-2 rounded-full bg-rose-500"></span> Atraso (8 alunas): R$ 2.514,00</span>
+</div>
+</div>
+<!-- Dia 10 Bar Row -->
+<div class="flex flex-col gap-1.5 mt-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+              Ciclo Vencimento Dia 10 (Total R$ 17.500,00)
+            </span>
+<span class="text-on-surface-variant">76 alunas · 70% arrecadado</span>
+</div>
+<div class="w-full h-4 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="bg-emerald-600 h-full w-[70%]" title="Recebido R$ 12.202,00"></div>
+<div class="bg-amber-400 h-full w-[19%]" title="Em Aberto R$ 3.412,00"></div>
+<div class="bg-rose-500 h-full w-[11%]" title="Em Atraso R$ 1.886,00"></div>
+</div>
+<div class="flex items-center gap-space-md text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-600"></span> Pago: R$ 12.202,00</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span> A Vencer: R$ 3.412,00</span>
+<span class="flex items-center gap-1 text-rose-700 font-semibold"><span class="w-2 h-2 rounded-full bg-rose-500"></span> Atraso (6 alunas): R$ 1.886,00</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/60 p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface">
+
+
+</div>
+<button class="text-primary font-label-sm text-label-sm font-bold hover:underline">Ver Histórico de Cobrança</button>
+</div>
+</div>
+<!-- Live Rule & Fee Calculator Widget -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Simulador de Taxas</span>
+<span class="material-symbols-outlined text-primary text-[22px]">calculate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calcule na hora o valor corrigido para cobrança em balcão ou negociação.</p>
+</div>
+<div class="flex flex-col gap-space-sm my-space-md">
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Valor da Mensalidade (R$)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner" id="calcBase" oninput="calculateSimulator()" type="number" value="300.00">
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Dia Vencimento</label>
+<select class="w-full h-10 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="calcDueDateDay" onchange="calculateSimulator()">
+<option value="5">Dia 05</option>
+<option value="10">Dia 10</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Dias Atrasados</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner" id="calcDays" oninput="calculateSimulator()" type="number" value="15" placeholder="5">
+</div>
+</div>
+<div class="p-3 bg-secondary-fixed/30 rounded-lg flex flex-col gap-1 mt-1">
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="">Multa Fixa (2%):</span>
+<span class="font-semibold text-on-surface" id="simMulta">R$ 6,00</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="">Juros (0,33%/dia):</span>
+<span class="font-semibold text-on-surface" id="simJuros">R$ 4,95</span>
+</div>
+<div class="h-px bg-surface-container-highest my-0.5"></div>
+<div class="flex justify-between items-baseline">
+<span class="font-label-md text-label-md font-bold text-on-surface">Total Calculado:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary" id="simTotal">R$ 310,95</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all flex items-center justify-center gap-1.5" onclick="copySimulatedPix()">
+<span class="material-symbols-outlined text-[18px]">qr_code</span>
+        Gerar Chave com Este Total
+      </button>
+</div>
+</div>
+<!-- Manual Payment Registration Slide-over / Modal (Hidden by Default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="paymentModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-bold font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">payments</span>
+<span class="">Dar Baixa Manual de Mensalidade</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" onclick="closePaymentModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Aluna:</span>
+<span class="font-bold text-on-surface" id="modalStudentName">Beatriz Mendonça</span>
+</div>
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Modalidade:</span>
+<span class="text-on-surface" id="modalClass">Ballet Clássico Ponta III</span>
+</div>
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Vencimento Original:</span>
+<span class="text-on-surface" id="modalDueDate">05/11/2024</span>
+</div>
+<div class="flex justify-between font-title-md text-title-md font-bold mt-1 pt-1 border-t border-surface-container-highest">
+<span class="text-primary">Valor Total com Juros/Multa:</span>
+<span class="text-primary" id="modalTotalValue">R$ 345.40</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="handlePaymentSubmit(event)">
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Forma de Pagamento</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="paymentMethod">
+<option value="pix">PIX Instantâneo</option>
+<option value="cartao_debito">Cartão de Débito (Maquininha Balcão)</option>
+<option value="cartao_credito">Cartão de Crédito</option>
+<option value="dinheiro">Dinheiro em Espécie</option>
+<option value="ted">Transferência Bancária (TED/DOC)</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Data da Efetivação</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="paymentDate" type="date" value="2024-11-23">
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant block mb-1">Observações / Número do Comprovante</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Ex: Aut. 883921 pelo Santander" type="text">
+</div>
+<div class="flex items-center gap-2 mt-1">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="sendReceiptWhatsapp" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer" for="sendReceiptWhatsapp">Enviar recibo digital imediatamente para o WhatsApp do responsável</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-space-md">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all" onclick="closePaymentModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary hover:opacity-95 font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+            Confirmar Recebimento e Dar Baixa
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Toast Notification Box -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-xl flex items-center gap-2.5 transition-all duration-300 translate-y-24 opacity-0" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]" id="toastIcon">send</span>
+<span class="font-label-md text-label-md font-medium" id="toastMessage">Disparo iniciado para 14 responsáveis inadimplentes!</span>
+</div>
+</div>
+<script>
+  // Filter Tabs Controller
+  function setFilter(type) {
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+      tab.classList.add('text-on-surface-variant');
+    });
+
+    const activeBtn = document.getElementById('btn-filter-' + type);
+    if (activeBtn) {
+      activeBtn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+      activeBtn.classList.remove('text-on-surface-variant');
+    }
+
+    const rows = document.querySelectorAll('#tableBody tr');
+    rows.forEach(row => {
+      if (type === 'all') {
+        row.style.display = '';
+      } else if (type === 'venc05') {
+        row.style.display = (row.getAttribute('data-venc') === 'venc05') ? '' : 'none';
+      } else if (type === 'venc10') {
+        row.style.display = (row.getAttribute('data-venc') === 'venc10') ? '' : 'none';
+      } else if (type === 'inadimplente') {
+        row.style.display = (row.getAttribute('data-category') === 'inadimplente') ? '' : 'none';
+      }
+    });
+  }
+
+  // Quick Search by Student Name or Class
+  function filterStudents() {
+    const term = document.getElementById('studentSearch').value.toLowerCase();
+    const rows = document.querySelectorAll('#tableBody tr');
+    rows.forEach(row => {
+      const text = row.getAttribute('data-student') || '';
+      if (text.includes(term)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Copy PIX Code with Toast feedback
+  function copyPix(code) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code);
+    }
+    showToast('Código PIX Copia e Cola copiado com sucesso!', 'content_copy');
+  }
+
+  // Toast Notification System
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIco = document.getElementById('toastIcon');
+    toastMsg.textContent = message;
+    toastIco.textContent = icon;
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 3200);
+  }
+
+  // Payment Modal Management
+  function openPaymentModal(student, value, danceClass, dueDate) {
+    document.getElementById('modalStudentName').textContent = student;
+    document.getElementById('modalTotalValue').textContent = 'R$ ' + value;
+    document.getElementById('modalClass').textContent = danceClass;
+    document.getElementById('modalDueDate').textContent = dueDate;
+    document.getElementById('paymentModal').classList.remove('hidden');
+  }
+
+  function closePaymentModal() {
+    document.getElementById('paymentModal').classList.add('hidden');
+  }
+
+  function handlePaymentSubmit(e) {
+    e.preventDefault();
+    closePaymentModal();
+    showToast('Mensalidade liquidada e recibo gerado!', 'verified');
+  }
+
+  function viewReceipt(code, student, value, date) {
+    showToast(`Visualizando ${code} · ${student} (${value})`, 'receipt_long');
+  }
+
+  function triggerBulkReminder() {
+    showToast('Disparo iniciado para 14 responsáveis inadimplentes!', 'send');
+  }
+
+  function toggleRuleConfigModal() {
+    showToast('Painel de configuração de regras de multa e juros aberto.', 'tune');
+  }
+
+  // Dynamic Rule Simulator
+  function calculateSimulator() {
+    const base = parseFloat(document.getElementById('calcBase').value) || 0;
+    const days = parseInt(document.getElementById('calcDays').value) || 0;
+
+    if (days <= 0) {
+      document.getElementById('simMulta').textContent = 'R$ 0,00';
+      document.getElementById('simJuros').textContent = 'R$ 0,00';
+      document.getElementById('simTotal').textContent = 'R$ ' + base.toFixed(2).replace('.', ',');
+      return;
+    }
+
+    const multa = base * 0.02; // 2%
+    const juros = base * (0.0033 * days); // 0.33% per day
+    const total = base + multa + juros;
+
+    document.getElementById('simMulta').textContent = 'R$ ' + multa.toFixed(2).replace('.', ',');
+    document.getElementById('simJuros').textContent = 'R$ ' + juros.toFixed(2).replace('.', ',');
+    document.getElementById('simTotal').textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
+  }
+
+  function copySimulatedPix() {
+    const total = document.getElementById('simTotal').textContent;
+    showToast(`Chave gerada no valor de ${total}! Copiada.`, 'qr_code');
+  }
+</script></main></div>
+
+
+
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#efdee5",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#890a57",
+          "outline": "#887179",
+          "surface-container": "#f4ecee",
+          "surface-container-high": "#eee6e9",
+          "surface-bright": "#fff7fa",
+          "primary": "#981c63",
+          "surface": "#fff7fa",
+          "tertiary-fixed": "#ffd9e4",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd8db",
+          "on-secondary-fixed-variant": "#4f4449",
+          "secondary-fixed-dim": "#d2c2c9",
+          "on-tertiary-fixed": "#350c1f",
+          "on-error": "#ffffff",
+          "on-primary-container": "#ffe5ed",
+          "inverse-on-surface": "#f7eff1",
+          "background": "#fff7fa",
+          "secondary-container": "#efdee5",
+          "on-surface-variant": "#554149",
+          "on-background": "#1e1b1d",
+          "surface-container-low": "#f9f2f4",
+          "on-tertiary-fixed-variant": "#69374b",
+          "on-tertiary-container": "#ffe5ec",
+          "on-secondary-container": "#6d6167",
+          "on-surface": "#1e1b1d",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#22191e",
+          "on-tertiary": "#ffffff",
+          "inverse-surface": "#332f31",
+          "inverse-primary": "#ffb0d0",
+          "on-primary-fixed": "#3d0024",
+          "surface-tint": "#a82b70",
+          "primary-fixed-dim": "#ffb0d0",
+          "primary-fixed": "#ffd8e6",
+          "tertiary-container": "#915a6f",
+          "tertiary-fixed-dim": "#f7b4cc",
+          "tertiary": "#764257",
+          "surface-container-highest": "#e8e1e3",
+          "error": "#ba1a1a",
+          "secondary": "#675b61",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "primary-container": "#b8387c",
+          "outline-variant": "dbbfc8",
+          "surface-variant": "#e8e1e3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.25rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex items-center justify-center"><main class="w-full bg-surface"><div class="flex flex-col w-full">
+<div class="relative w-full min-h-[92vh] flex items-center justify-center p-space-md lg:p-margin overflow-hidden">
+<!-- Atmospheric Ambient Backdrops -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed filter blur-3xl opacity-40 pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-secondary-fixed filter blur-3xl opacity-50 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-tertiary-fixed filter blur-2xl opacity-20 pointer-events-none"></div>
+<div class="relative w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-gutter items-stretch">
+<!-- Left Column: Branding, Editorial Inspiration & Studio Telemetry -->
+<div class="lg:col-span-6 flex flex-col justify-between bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl shadow-sm relative overflow-hidden">
+<!-- Floating Visual Accent -->
+<div class="absolute top-0 right-0 -mr-12 -mt-12 w-48 h-48 bg-primary-fixed-dim/20 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<!-- Logo & Brand Mark Header -->
+<div class="flex items-center gap-space-md mb-space-xl">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center overflow-hidden">
+<img alt="IsaDance Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyA9uEqDWDJ-srW2TcMb4sdbisX0jtfRgsvsv9THoCRS40oWXT5kPYpUbFWNnbXnn-KWEAesWSvbSmQEP9MBdW0WtQewlL9ey5wtXFLB9zsgE1l287mZPDkHmyK_II2NhNUKJ3PqB-lE5KgSsJCEFhAtQ3slzVHuyZpQOiRfaErR1M_VdwX7e3n9qYTfWyizD5W3Tsl_QxCS2BcVb4z2hY9-1KRoSw5XpdDvzza-3t0tb7w4koZWrQLQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">IsaDance</span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Studio Operations &amp; Academy Suite</span>
+</div>
+</div>
+<!-- Editorial Greeting & Copy -->
+<div class="space-y-space-md max-w-lg mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest text-tertiary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Portal Administrativo Oficial</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
+              A elegância da dança aliada à <span class="text-primary italic">precisão da gestão</span>.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Bem-vinda ao IsaDance Studio Management. Controle de matrículas, horários de ensaio e fluxo financeiro desenhados com a harmonia e o rigor que sua escola merece.
+            </p>
+</div>
+</div>
+<!-- Live Studio Metric Badges & Inspiration Quote -->
+<div class="space-y-space-md mt-space-lg">
+<!-- Quote Strip -->
+<div class="bg-surface-container-lowest/80 backdrop-blur rounded-lg p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-sm mt-0.5">format_quote</span>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                  "Dançar é pintar com o ar e os passos; liderar uma academia é orquestrar cada detalhe desse movimento."
+                </p>
+<span class="font-label-sm text-label-sm text-outline block mt-1">Temporada 2025 • Festival de Inverno</span>
+</div>
+</div>
+</div>
+<!-- Studio Live Metrics -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Alunas Ativas</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">428</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 98.4% freq.
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Aulas Hoje</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">16</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 4 salas
+              </span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mensalidades</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">94%</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Em dia
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Authentication Card -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-md w-full relative">
+<!-- Form Header -->
+<div class="mb-space-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Acesse sua Conta</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Informe suas credenciais autorizadas para entrar no ecossistema do estúdio.
+            </p>
+</div>
+<!-- Quick Access Profile Switcher -->
+<div class="mb-space-lg">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Perfil de Operação</label>
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low p-1 rounded-lg" id="role-selector">
+<button class="role-btn active flex items-center justify-center gap-1.5 py-2 px-2 rounded-md font-label-md text-label-md transition bg-primary text-on-primary shadow-sm" data-role="admin" type="button">
+<span class="material-symbols-outlined text-[16px]">admin_panel_settings</span>
+<span>Diretoria</span>
+</button>
+<button class="role-btn flex items-center justify-center gap-1.5 py-2 px-2 rounded-md font-label-md text-label-md text-on-surface-variant transition hover:bg-surface-container" data-role="reception" type="button">
+<span class="material-symbols-outlined text-[16px]">desk</span>
+<span>Recepção</span>
+</button>
+<button class="role-btn flex items-center justify-center gap-1.5 py-2 px-2 rounded-md font-label-md text-label-md text-on-surface-variant transition hover:bg-surface-container" data-role="teacher" type="button">
+<span class="material-symbols-outlined text-[16px]">sports_gymnastics</span>
+<span>Instrutora</span>
+</button>
+</div>
+</div>
+<!-- Login Form -->
+<form class="space-y-space-md" id="login-form" onsubmit="event.preventDefault(); handleLoginSubmit();">
+<!-- Email Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="email">
+                E-mail Institucional ou Usuário
+              </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline absolute left-3 pointer-events-none text-[20px]">alternate_email</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-bright focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition" id="email" name="email" placeholder="exemplo@isadance.com.br" required="" type="email" value="diretoria@isadance.com.br"/>
+</div>
+</div>
+<!-- Password Input with Toggle -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block font-label-md text-label-md text-on-surface" for="password">Chave de Acesso</label>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition" href="#recuperar-senha">
+                  Esqueceu a senha?
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline absolute left-3 pointer-events-none text-[20px]">lock</span>
+<input class="w-full h-11 pl-10 pr-11 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-bright focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition" id="password" name="password" placeholder="Digite sua senha" required="" type="password" value="••••••••••••"/>
+<button aria-label="Alternar visibilidade da senha" class="absolute right-3 text-outline hover:text-primary transition p-1 flex items-center justify-center" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Credentials & Auto Sync -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lembrar nesta estação</span>
+</label>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> SSL 256-bit
+              </span>
+</div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container hover:shadow-md transition active:scale-[0.99]" id="submit-btn" type="submit">
+<span>Entrar na Plataforma</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Alternative Quick Switch Notification -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low rounded-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_scanner</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acesso Rápido na Catraca?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Use o aplicativo do instrutor via QR Code</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm hover:bg-secondary-fixed transition" type="button">
+              Escanear
+            </button>
+</div>
+<!-- Trust & Compliance Footer -->
+<div class="mt-space-lg flex items-center justify-between text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Proteção de Dados LGPD Ativa</span>
+</div>
+<div class="flex items-center gap-3">
+<a class="hover:text-primary transition" href="#ajuda">Suporte do Estúdio</a>
+<span>•</span>
+<span>v3.4.2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Password Visibility Toggle
+  const toggleBtn = document.getElementById('toggle-password');
+  const passwordInput = document.getElementById('password');
+  const eyeIcon = document.getElementById('password-eye-icon');
+
+  if (toggleBtn && passwordInput && eyeIcon) {
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+  }
+
+  // Interactive Role Selector
+  const roleButtons = document.querySelectorAll('.role-btn');
+  const emailInput = document.getElementById('email');
+
+  const defaultRoleEmails = {
+    admin: 'diretoria@isadance.com.br',
+    reception: 'recepcao@isadance.com.br',
+    teacher: 'professores@isadance.com.br'
+  };
+
+  roleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      roleButtons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      button.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      button.classList.remove('text-on-surface-variant');
+
+      const role = button.getAttribute('data-role');
+      if (emailInput && defaultRoleEmails[role]) {
+        emailInput.value = defaultRoleEmails[role];
+      }
+    });
+  });
+
+  // Micro-interaction on Login Click
+  function handleLoginSubmit() {
+    const btn = document.getElementById('submit-btn');
+    if (!btn) return;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `
+      <span class="inline-block animate-spin material-symbols-outlined text-[20px]">progress_activity</span>
+      <span>Autenticando...</span>
+    `;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+        <span>Acesso Concedido</span>
+      `;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-secondary');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-secondary');
+        btn.classList.add('bg-primary');
+        btn.disabled = false;
+      }, 1500);
+    }, 1200);
+  }
+</script></main></body></html>
