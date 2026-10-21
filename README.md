@@ -1,38 +1,28 @@
 # IsaDance: gestão de studio de dança
 
-Sistema de gestão para o studio IsaDance: alunos e matrículas, agenda de aulas, mensalidades, equipe e administração.
+Sistema de gestão para o studio IsaDance: alunas, turmas e mensalidades, com cobrança automática pelo Asaas e aviso por WhatsApp.
 
-**Fase atual:** validar as telas com o cliente e definir o escopo da primeira versão. Ainda não há backend, banco de dados nem integração de pagamentos.
+**Fase atual:** protótipo enxuto em Next.js, ainda com dados de exemplo. As decisões e as etapas estão em [docs/plano.md](docs/plano.md).
 
-## Protótipo navegável
+## Rodar o sistema
 
-- **Online:** https://joaopedro2018.github.io/saas_studio_danca/ (funciona depois de ativar o GitHub Pages no repositório).
-- **Local:** abra [prototipo/index.html](prototipo/index.html) no navegador. Precisa de internet, porque o Tailwind e as fontes vêm de CDN.
+Precisa do Node.js 20 ou mais novo.
 
-Como navegar:
-- Na tela de login, **Entrar** leva para Alunos & Matrículas.
-- O menu lateral leva às outras telas.
-- Em Equipe & Modalidades, **Novo Colaborador** abre o cadastro completo.
-- Clicar no avatar no topo mostra a opção **Sair**.
+```powershell
+cd web
+npm install
+npm run dev
+```
 
-Visão Geral e Relatórios ainda não têm tela e só mostram um aviso. Todos os dados são fictícios.
+Depois abra http://localhost:3000. O login ainda é provisório: qualquer e-mail e senha entram.
 
 ## Estrutura
 
 | Caminho | Conteúdo |
 |---|---|
-| [prototipo/](prototipo/) | Protótipo gerado a partir das telas do Stitch. Não edite à mão: rode o script abaixo. |
-| [prototipo/assets/prototipo.js](prototipo/assets/prototipo.js) | Navegação entre as telas (login, menu, sair, avisos). |
-| [DESIGN.md](DESIGN.md) | Design system do projeto, gerado pelo Stitch: cores, tipografia, espaçamentos e componentes. |
-| [stitch/](stitch/) | Telas originais exportadas do Google Stitch e o logo. |
+| [web/](web/) | O sistema (Next.js). |
+| [docs/plano.md](docs/plano.md) | Decisões, fluxo de cobrança e etapas do projeto. |
+| [DESIGN.md](DESIGN.md) | Design system gerado pelo Stitch: cores, tipografia e componentes. |
+| [stitch/](stitch/) | Telas originais exportadas do Google Stitch e o logo. Servem só de referência. |
+| [prototipo/](prototipo/) | Primeiro protótipo, gerado das telas do Stitch e mostrado ao cliente. Serve só de referência. |
 | [scripts/montar-prototipo.ps1](scripts/montar-prototipo.ps1) | Gera `prototipo/` a partir de `stitch/screens/`. |
-
-## Atualizar o protótipo
-
-Depois de exportar telas novas ou alteradas do Stitch para `stitch/screens/`, rode:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\montar-prototipo.ps1
-```
-
-Uma tela nova precisa ser adicionada à lista `$paginas` do script. Se ela também for entrar no menu lateral, adicione-a à lista `$menu`.

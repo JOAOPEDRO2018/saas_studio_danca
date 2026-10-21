@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IsaDance: app Next.js
 
-## Getting Started
+## Comandos
 
-First, run the development server:
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Sobe o sistema em modo de desenvolvimento em http://localhost:3000 |
+| `npm run build` | Gera a versão de produção (também checa os tipos) |
+| `npm run lint` | Procura problemas no código |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Onde fica cada coisa
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Caminho | Conteúdo |
+|---|---|
+| `src/app/(painel)/` | Telas com menu lateral: Painel (`page.tsx`), `alunas/`, `turmas/`, `mensalidades/` |
+| `src/app/login/` | Tela de login (provisória) |
+| `src/components/` | Peças visuais reaproveitadas (`ui.tsx`) e o menu (`menu.tsx`) |
+| `src/lib/dados-exemplo.ts` | Dados de exemplo e regras de status das mensalidades. Será trocado pelo Supabase. |
+| `src/lib/hoje.ts` | Data atual no servidor (ver observação abaixo) |
+| `src/app/globals.css` | Cores e fonte do design system |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Observação: Cache Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O projeto usa `cacheComponents` (ligado em `next.config.ts`). Com essa opção, uma tela que depende da hora da requisição, como a data de hoje ou dados do banco, precisa:
 
-## Learn More
+1. Ler esse dado dentro de um componente `async`, com `await hoje()` ou `await connection()`.
+2. Ficar dentro de um `<Suspense>` na página.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+As páginas `(painel)/page.tsx`, `alunas/page.tsx` e `mensalidades/page.tsx` seguem esse padrão.
