@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Cabecalho, Cartao, Carregando, SeloStatus, Tabela } from "@/components/ui";
-import { alunaPorId, envioCobranca, mensalidadesExemplo, statusDa, type StatusMensalidade } from "@/lib/dados-exemplo";
+import { listarMensalidades } from "@/lib/dados";
+import { envioCobranca, statusDa, type StatusMensalidade } from "@/lib/mensalidades";
 import { formatarData, formatarMoeda, formatarReferencia } from "@/lib/formatar";
 import { hoje as dataDeHoje } from "@/lib/hoje";
 
@@ -18,12 +19,12 @@ const filtros: { valor: StatusMensalidade | "todas"; rotulo: string }[] = [
 async function ListaMensalidades({ searchParams }: { searchParams: PageProps<"/mensalidades">["searchParams"] }) {
   const { status } = await searchParams;
   const filtro = filtros.some((f) => f.valor === status) ? (status as StatusMensalidade | "todas") : "todas";
-  const hoje = await dataDeHoje();
+  const [hoje, todas] = await Promise.all([dataDeHoje(), listarMensalidades()]);
 
-  const mensalidades = mensalidadesExemplo(hoje)
+  // A lista já vem do banco ordenada do vencimento mais recente para o mais antigo.
+  const mensalidades = todas
     .map((m) => ({ ...m, status: statusDa(m, hoje), envio: envioCobranca(m, hoje) }))
-    .filter((m) => filtro === "todas" || m.status === filtro)
-    .sort((a, b) => b.vencimento.getTime() - a.vencimento.getTime());
+    .filter((m) => filtro === "todas" || m.status === filtro);
 
   return (
     <>
@@ -44,7 +45,7 @@ async function ListaMensalidades({ searchParams }: { searchParams: PageProps<"/m
       <Tabela colunas={["Aluna", "Referência", "Vencimento", "Valor", "Situação", "Cobrança no WhatsApp"]}>
         {mensalidades.map((m) => (
           <tr key={m.id} className="hover:bg-[#fdf8fa]">
-            <td className="px-4 py-3 font-medium">{alunaPorId(m.alunaId)?.nome}</td>
+            <td className="px-4 py-3 font-medium">{m.alunaNome}</td>
             <td className="px-4 py-3 text-texto-medio">{formatarReferencia(m.referencia)}</td>
             <td className="px-4 py-3 text-texto-medio">{formatarData(m.vencimento)}</td>
             <td className="px-4 py-3">{formatarMoeda(m.valor)}</td>

@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { Cabecalho, Cartao, Carregando, Indicador, SeloStatus } from "@/components/ui";
-import { alunaPorId, alunas, mensalidadesExemplo, statusDa, turmas, type DiaSemana } from "@/lib/dados-exemplo";
+import { listarAlunas, listarMensalidades, listarTurmas, type DiaSemana } from "@/lib/dados";
+import { referenciaDe, statusDa } from "@/lib/mensalidades";
 import { formatarData, formatarMoeda } from "@/lib/formatar";
 import { hoje as dataDeHoje } from "@/lib/hoje";
 
 async function Resumo() {
-  const hoje = await dataDeHoje();
-  const mensalidades = mensalidadesExemplo(hoje).map((m) => ({ ...m, status: statusDa(m, hoje) }));
-  const referenciaAtual = `${hoje.getFullYear()}-${String(hoje.getMonth() + 1).padStart(2, "0")}`;
-  const doMes = mensalidades.filter((m) => m.referencia === referenciaAtual);
+  const [hoje, alunas, turmas, todas] = await Promise.all([dataDeHoje(), listarAlunas(), listarTurmas(), listarMensalidades()]);
+  const mensalidades = todas.map((m) => ({ ...m, status: statusDa(m, hoje) }));
+  const doMes = mensalidades.filter((m) => m.referencia === referenciaDe(hoje));
   const soma = (lista: typeof mensalidades) => lista.reduce((total, m) => total + m.valor, 0);
 
   const recebido = doMes.filter((m) => m.status === "paga");
@@ -56,7 +56,7 @@ async function Resumo() {
             <ul className="divide-y divide-borda">
               {atrasadas.map((m) => (
                 <li key={m.id} className="flex items-center justify-between gap-3 py-2.5 text-sm">
-                  <span className="font-medium">{alunaPorId(m.alunaId)?.nome}</span>
+                  <span className="font-medium">{m.alunaNome}</span>
                   <span className="flex items-center gap-3 text-texto-medio">
                     venceu {formatarData(m.vencimento)} · {formatarMoeda(m.valor)}
                     <SeloStatus status={m.status} />

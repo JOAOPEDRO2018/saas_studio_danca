@@ -8,6 +8,15 @@
 | `npm run build` | Gera a versão de produção (também checa os tipos) |
 | `npm run lint` | Procura problemas no código |
 
+## Configurar o Supabase (uma vez)
+
+1. Crie uma conta em https://supabase.com e um projeto novo (região **South America (São Paulo)**). Guarde a senha do banco.
+2. No projeto, abra **SQL Editor**, cole o conteúdo de `../supabase/01-tabelas.sql` e clique em **Run**. Depois faça o mesmo com `../supabase/02-dados-exemplo.sql`.
+3. Copie `.env.example` para `.env.local` e preencha:
+   - `SUPABASE_URL`: em **Project Settings > Data API**, o campo *Project URL*.
+   - `SUPABASE_SECRET_KEY`: em **Project Settings > API Keys**, uma chave *Secret* (começa com `sb_secret_`).
+4. Rode `npm run dev`.
+
 ## Onde fica cada coisa
 
 | Caminho | Conteúdo |
@@ -15,7 +24,10 @@
 | `src/app/(painel)/` | Telas com menu lateral: Painel (`page.tsx`), `alunas/`, `turmas/`, `mensalidades/` |
 | `src/app/login/` | Tela de login (provisória) |
 | `src/components/` | Peças visuais reaproveitadas (`ui.tsx`) e o menu (`menu.tsx`) |
-| `src/lib/dados-exemplo.ts` | Dados de exemplo e regras de status das mensalidades. Será trocado pelo Supabase. |
+| `src/lib/supabase.ts` | Conexão com o Supabase (só no servidor, com a chave secreta) |
+| `src/lib/dados.ts` | Leitura das tabelas e os tipos usados pelas telas |
+| `src/lib/mensalidades.ts` | Regras das mensalidades: situação (paga, pendente, atrasada) e envio da cobrança |
+| `../supabase/` | SQL das tabelas e dos dados de exemplo |
 | `src/lib/hoje.ts` | Data atual no servidor (ver observação abaixo) |
 | `src/app/globals.css` | Cores e fonte do design system |
 

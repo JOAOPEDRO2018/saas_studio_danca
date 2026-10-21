@@ -18,3 +18,11 @@ export function formatarReferencia(referencia: string) {
 }
 
 export const nomesDias = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+// "5511984521100" -> "(11) 98452-1100"
+export function formatarWhatsapp(numero: string) {
+  const local = numero.startsWith("55") ? numero.slice(2) : numero;
+  const ddd = local.slice(0, 2);
+  const resto = local.slice(2);
+  return `(${ddd}) ${resto.slice(0, -4)}-${resto.slice(-4)}`;
+}

@@ -1,4 +1,4 @@
-import type { StatusMensalidade } from "@/lib/dados-exemplo";
+import type { SituacaoAluna, StatusMensalidade } from "@/lib/mensalidades";
 
 export function Cabecalho({ titulo, descricao }: { titulo: string; descricao?: string }) {
   return (
@@ -32,13 +32,14 @@ export function Indicador({ rotulo, valor, detalhe, destaque = false }: {
   );
 }
 
-const estilosStatus: Record<StatusMensalidade, { rotulo: string; classe: string }> = {
+const estilosStatus: Record<StatusMensalidade | SituacaoAluna, { rotulo: string; classe: string }> = {
   paga: { rotulo: "Paga", classe: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+  "em-dia": { rotulo: "Em dia", classe: "bg-emerald-50 text-emerald-700 border-emerald-200" },
   pendente: { rotulo: "Pendente", classe: "bg-amber-50 text-amber-700 border-amber-200" },
   atrasada: { rotulo: "Atrasada", classe: "bg-rose-50 text-rose-700 border-rose-200" },
 };
 
-export function SeloStatus({ status }: { status: StatusMensalidade }) {
+export function SeloStatus({ status }: { status: StatusMensalidade | SituacaoAluna }) {
   const { rotulo, classe } = estilosStatus[status];
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${classe}`}>
