@@ -5,11 +5,13 @@ import { redirect } from "next/navigation";
 import { normalizarWhatsapp } from "@/lib/formatar";
 import type { EstadoFormulario } from "@/lib/formulario";
 import { valoresDo } from "@/lib/formulario";
-import { supabase } from "@/lib/supabase";
+import { supabaseDaEquipe } from "@/lib/supabase";
 
 // Cria a aluna (id null) ou atualiza a aluna com esse id, junto com as turmas
 // em que ela está matriculada.
 export async function salvarAluna(id: string | null, _estado: EstadoFormulario, formData: FormData): Promise<EstadoFormulario> {
+  // Confere o login primeiro: uma Server Action pode ser chamada sem passar pela tela.
+  const db = await supabaseDaEquipe();
   const nome = String(formData.get("nome") ?? "").trim();
   const whatsapp = normalizarWhatsapp(String(formData.get("whatsapp") ?? ""));
   const diaVencimento = Number(formData.get("diaVencimento"));
@@ -34,16 +36,16 @@ export async function salvarAluna(id: string | null, _estado: EstadoFormulario, 
 
   const aluna = { nome, whatsapp, dia_vencimento: diaVencimento, valor_mensalidade: valor, ativa };
   const salva = id
-    ? await supabase().from("alunas").update(aluna).eq("id", id).select("id").single()
-    : await supabase().from("alunas").insert(aluna).select("id").single();
+    ? await db.from("alunas").update(aluna).eq("id", id).select("id").single()
+    : await db.from("alunas").insert(aluna).select("id").single();
   if (salva.error) return falha(salva.error.message);
   const alunaId = salva.data.id;
 
   // Troca as matrículas pelas turmas marcadas no formulário.
-  const removidas = await supabase().from("matriculas").delete().eq("aluna_id", alunaId);
+  const removidas = await db.from("matriculas").delete().eq("aluna_id", alunaId);
   if (removidas.error) return falha(removidas.error.message);
   if (turmaIds.length > 0) {
-    const novas = await supabase().from("matriculas").insert(turmaIds.map((turma_id) => ({ aluna_id: alunaId, turma_id })));
+    const novas = await db.from("matriculas").insert(turmaIds.map((turma_id) => ({ aluna_id: alunaId, turma_id })));
     if (novas.error) return falha(novas.error.message);
   }
 

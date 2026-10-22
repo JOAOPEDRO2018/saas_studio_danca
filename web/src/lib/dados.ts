@@ -1,6 +1,6 @@
 import "server-only";
 import { connection } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabaseDaEquipe } from "@/lib/supabase";
 
 // Leitura das tabelas do Supabase. As telas usam só estes tipos, sem saber
 // como as colunas se chamam no banco.
@@ -59,7 +59,8 @@ function paraTurma(t: LinhaTurma): Turma {
 
 export async function listarTurmas(): Promise<Turma[]> {
   await connection();
-  const linhas = exigir(await supabase().from("turmas").select(colunasTurma).order("nome"));
+  const db = await supabaseDaEquipe();
+  const linhas = exigir(await db.from("turmas").select(colunasTurma).order("nome"));
   return linhas.map(paraTurma);
 }
 
@@ -69,8 +70,9 @@ const formatoId = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
 
 export async function buscarTurma(id: string): Promise<Turma | null> {
   await connection();
+  const db = await supabaseDaEquipe();
   if (!formatoId.test(id)) return null;
-  const linha = exigir(await supabase().from("turmas").select(colunasTurma).eq("id", id).maybeSingle());
+  const linha = exigir(await db.from("turmas").select(colunasTurma).eq("id", id).maybeSingle());
   return linha ? paraTurma(linha) : null;
 }
 
@@ -100,21 +102,24 @@ function paraAluna(a: LinhaAluna): Aluna {
 
 export async function listarAlunas(): Promise<Aluna[]> {
   await connection();
-  const linhas = exigir(await supabase().from("alunas").select(colunasAluna).order("nome"));
+  const db = await supabaseDaEquipe();
+  const linhas = exigir(await db.from("alunas").select(colunasAluna).order("nome"));
   return linhas.map(paraAluna);
 }
 
 export async function buscarAluna(id: string): Promise<Aluna | null> {
   await connection();
+  const db = await supabaseDaEquipe();
   if (!formatoId.test(id)) return null;
-  const linha = exigir(await supabase().from("alunas").select(colunasAluna).eq("id", id).maybeSingle());
+  const linha = exigir(await db.from("alunas").select(colunasAluna).eq("id", id).maybeSingle());
   return linha ? paraAluna(linha) : null;
 }
 
 export async function listarMensalidades(): Promise<Mensalidade[]> {
   await connection();
+  const db = await supabaseDaEquipe();
   const linhas = exigir(
-    await supabase()
+    await db
       .from("mensalidades")
       .select("id, aluna_id, referencia, vencimento, valor, paga_em, alunas(nome)")
       .order("vencimento", { ascending: false }),

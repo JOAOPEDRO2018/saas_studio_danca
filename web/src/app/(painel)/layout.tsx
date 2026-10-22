@@ -1,5 +1,29 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Menu } from "@/components/menu";
+import { membroAtual } from "@/lib/supabase";
+import { sair } from "../login/acoes";
+
+function BotaoSair({ className }: { className: string }) {
+  return (
+    <form action={sair} className={className}>
+      <button type="submit" className="text-sm text-texto-fraco hover:text-marca-escura">Sair</button>
+    </form>
+  );
+}
+
+const nomesPerfis = { dona: "Dona", recepcao: "Recepção" };
+
+// Quem está conectado. Lê a sessão, por isso fica dentro de um Suspense.
+async function UsuarioLogado() {
+  const membro = await membroAtual();
+  return (
+    <p className="px-4 text-sm">
+      <span className="block font-semibold">{membro.nome}</span>
+      <span className="text-texto-fraco">{nomesPerfis[membro.perfil]}</span>
+    </p>
+  );
+}
 
 function Marca() {
   return (
@@ -16,15 +40,18 @@ export default function LayoutPainel({ children }: { children: React.ReactNode }
       <aside className="hidden w-60 shrink-0 flex-col gap-8 border-r border-borda bg-superficie p-5 md:flex">
         <Marca />
         <Menu />
-        <Link href="/login" className="mt-auto px-4 text-sm text-texto-fraco hover:text-marca-escura">
-          Sair
-        </Link>
+        <div className="mt-auto flex flex-col gap-3">
+          <Suspense>
+            <UsuarioLogado />
+          </Suspense>
+          <BotaoSair className="px-4" />
+        </div>
       </aside>
 
       <header className="sticky top-0 z-10 flex flex-col gap-3 border-b border-borda bg-superficie px-4 py-3 md:hidden">
         <div className="flex items-center justify-between">
           <Marca />
-          <Link href="/login" className="text-sm text-texto-fraco">Sair</Link>
+          <BotaoSair className="" />
         </div>
         <Menu horizontal />
       </header>

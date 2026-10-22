@@ -4,10 +4,12 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import type { EstadoFormulario } from "@/lib/formulario";
 import { valoresDo } from "@/lib/formulario";
-import { supabase } from "@/lib/supabase";
+import { supabaseDaEquipe } from "@/lib/supabase";
 
 // Cria a turma (id null) ou atualiza a turma com esse id.
 export async function salvarTurma(id: string | null, _estado: EstadoFormulario, formData: FormData): Promise<EstadoFormulario> {
+  // Confere o login primeiro: uma Server Action pode ser chamada sem passar pela tela.
+  const db = await supabaseDaEquipe();
   const nome = String(formData.get("nome") ?? "").trim();
   const professora = String(formData.get("professora") ?? "").trim();
   const dias = formData.getAll("dias").map(Number).filter((d) => Number.isInteger(d) && d >= 0 && d <= 6);
@@ -24,8 +26,8 @@ export async function salvarTurma(id: string | null, _estado: EstadoFormulario, 
 
   const turma = { nome, professora, dias, horario, capacidade };
   const { error } = id
-    ? await supabase().from("turmas").update(turma).eq("id", id)
-    : await supabase().from("turmas").insert(turma);
+    ? await db.from("turmas").update(turma).eq("id", id)
+    : await db.from("turmas").insert(turma);
   if (error) return { erros: { geral: `Não foi possível salvar: ${error.message}` }, valores: valoresDo(formData) };
 
   revalidatePath("/", "layout");

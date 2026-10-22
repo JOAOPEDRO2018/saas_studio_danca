@@ -18,6 +18,13 @@ Pontos a definir na etapa do WhatsApp:
 - **Como enviar a mensagem.** As opções são o recurso de notificação por WhatsApp do próprio Asaas, se atender ao fluxo, ou a API oficial do WhatsApp Business. A API oficial exige um modelo de mensagem aprovado pela Meta e cobra por conversa.
 - **Pix junto do boleto.** O Pix compensa na hora; o boleto leva de 1 a 3 dias úteis.
 
+## Equipe e logs (definido em 21/10/2026)
+
+- Dois perfis: **dona** e **recepção**. As duas veem e editam tudo.
+- A dona tem uma aba de **logs** com o rastreio das atividades: quem, quando, onde (o registro afetado) e o que (antes e depois de cada campo alterado).
+- Entram no log: entradas e saídas (inclusive senha errada), cadastros e edições, mensalidades e pagamentos (inclusive as mudanças feitas pelo sistema, como o aviso do Asaas).
+- Ninguém apaga nem altera um registro de log. Depois de 1 ano o sistema apaga os registros sozinho, mas antes manda o que será apagado para um e-mail de backup (o cliente vai informar qual).
+
 ## Etapas
 
 Cada etapa termina com um commit.
@@ -28,9 +35,10 @@ Cada etapa termina com um commit.
 | 2 | Protótipo enxuto (Painel, Alunas, Turmas, Mensalidades, Login) com dados de exemplo | feito |
 | 3 | Supabase: criar o projeto e as tabelas, e trocar os dados de exemplo pelos do banco | feito |
 | 4 | Cadastrar e editar alunas e turmas | feito |
-| 5 | Login de verdade (Supabase Auth), só para a equipe do studio | próxima |
-| 6 | Primeiro deploy na AWS (Amplify Hosting) | |
-| 7 | Gerar as mensalidades de cada mês automaticamente | |
-| 8 | Asaas em ambiente de testes (sandbox): criar a cobrança e receber o aviso de pagamento | |
-| 9 | Envio pelo WhatsApp e rotina diária na AWS (EventBridge + Lambda) | |
-| 10 | Virar a chave para produção com o cliente | |
+| 5 | Login de verdade (Supabase Auth) com dois perfis: dona e recepção | feito |
+| 6 | Logs de atividade (aba só da dona) | próxima |
+| 7 | Primeiro deploy na AWS (Amplify Hosting) | |
+| 8 | Gerar as mensalidades de cada mês automaticamente | |
+| 9 | Asaas em ambiente de testes (sandbox): criar a cobrança e receber o aviso de pagamento | |
+| 10 | Envio pelo WhatsApp e rotina diária na AWS (EventBridge + Lambda), incluindo a limpeza dos logs | |
+| 11 | Virar a chave para produção com o cliente | |
