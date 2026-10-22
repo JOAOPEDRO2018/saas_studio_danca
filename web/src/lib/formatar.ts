@@ -26,3 +26,18 @@ export function formatarWhatsapp(numero: string) {
   const resto = local.slice(2);
   return `(${ddd}) ${resto.slice(0, -4)}-${resto.slice(-4)}`;
 }
+
+// O contrário de formatarWhatsapp: recebe o que a pessoa digitou no cadastro
+// ("(11) 98452-1100", "11984521100", "+55 11 98452-1100"...) e devolve o
+// número no formato salvo no banco ("5511984521100"), ou null se não for um
+// celular válido.
+export function normalizarWhatsapp(texto: string): string | null {
+  // Fica só com os dígitos: "(11) 98452-1100" -> "11984521100".
+  let numero = texto.replace(/\D/g, "");
+  // Tira o código do Brasil (55) e o zero que algumas pessoas põem antes do DDD.
+  if (numero.length === 13 && numero.startsWith("55")) numero = numero.slice(2);
+  if (numero.length === 12 && numero.startsWith("0")) numero = numero.slice(1);
+  // Precisa sobrar DDD (2 dígitos, sem zero) + celular (9 dígitos, começando com 9).
+  if (!/^[1-9]\d9\d{8}$/.test(numero)) return null;
+  return "55" + numero;
+}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
 const itens = [
   { href: "/", rotulo: "Painel" },
@@ -10,12 +11,26 @@ const itens = [
   { href: "/mensalidades", rotulo: "Mensalidades" },
 ];
 
+// Em rotas como /alunas/[id], o endereço só é conhecido na requisição. O
+// Suspense deixa o Next gerar antes o menu sem destaque e destacar o item
+// atual quando o endereço chega.
 export function Menu({ horizontal = false }: { horizontal?: boolean }) {
-  const caminho = usePathname();
+  return (
+    <Suspense fallback={<Itens horizontal={horizontal} caminho={null} />}>
+      <MenuComDestaque horizontal={horizontal} />
+    </Suspense>
+  );
+}
+
+function MenuComDestaque({ horizontal }: { horizontal: boolean }) {
+  return <Itens horizontal={horizontal} caminho={usePathname()} />;
+}
+
+function Itens({ horizontal, caminho }: { horizontal: boolean; caminho: string | null }) {
   return (
     <nav className={horizontal ? "flex gap-1 overflow-x-auto" : "flex flex-col gap-1"}>
       {itens.map((item) => {
-        const ativo = item.href === "/" ? caminho === "/" : caminho.startsWith(item.href);
+        const ativo = caminho !== null && (item.href === "/" ? caminho === "/" : caminho.startsWith(item.href));
         return (
           <Link
             key={item.href}

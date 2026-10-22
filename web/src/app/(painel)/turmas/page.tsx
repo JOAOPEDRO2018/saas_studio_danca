@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
-import { Cabecalho, Carregando, Tabela } from "@/components/ui";
+import { BotaoLink, Cabecalho, Carregando, Tabela } from "@/components/ui";
 import { listarAlunas, listarTurmas } from "@/lib/dados";
 import { nomesDias } from "@/lib/formatar";
 
@@ -15,7 +16,9 @@ async function ListaTurmas() {
         const matriculadas = alunas.filter((a) => a.ativa && a.turmaIds.includes(turma.id)).length;
         return (
           <tr key={turma.id} className="hover:bg-[#fdf8fa]">
-            <td className="px-4 py-3 font-medium">{turma.nome}</td>
+            <td className="px-4 py-3 font-medium">
+              <Link href={`/turmas/${turma.id}`} className="hover:text-marca hover:underline">{turma.nome}</Link>
+            </td>
             <td className="px-4 py-3 text-texto-medio">{turma.dias.map((d) => nomesDias[d]).join(" e ")}</td>
             <td className="px-4 py-3 text-texto-medio">{turma.horario}</td>
             <td className="px-4 py-3 text-texto-medio">{turma.professora}</td>
@@ -32,7 +35,7 @@ async function ListaTurmas() {
 export default function PaginaTurmas() {
   return (
     <>
-      <Cabecalho titulo="Turmas" descricao="Horários e lotação de cada turma." />
+      <Cabecalho titulo="Turmas" descricao="Horários e lotação de cada turma." acao={<BotaoLink href="/turmas/nova">Nova turma</BotaoLink>} />
       <Suspense fallback={<Carregando />}>
         <ListaTurmas />
       </Suspense>

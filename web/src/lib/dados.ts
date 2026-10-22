@@ -49,31 +49,66 @@ function exigir<T>({ data, error }: { data: T | null; error: { message: string }
   return data as T;
 }
 
+const colunasTurma = "id, nome, professora, dias, horario, capacidade";
+
+type LinhaTurma = { id: string; nome: string; professora: string; dias: number[]; horario: string; capacidade: number };
+
+function paraTurma(t: LinhaTurma): Turma {
+  return { ...t, dias: t.dias as DiaSemana[], horario: t.horario.slice(0, 5) };
+}
+
 export async function listarTurmas(): Promise<Turma[]> {
   await connection();
-  const linhas = exigir(
-    await supabase().from("turmas").select("id, nome, professora, dias, horario, capacidade").order("nome"),
-  );
-  return linhas.map((t) => ({ ...t, dias: t.dias as DiaSemana[], horario: t.horario.slice(0, 5) }));
+  const linhas = exigir(await supabase().from("turmas").select(colunasTurma).order("nome"));
+  return linhas.map(paraTurma);
+}
+
+// Um id fora do formato faria o banco responder com erro; para as telas de
+// edição, isso é o mesmo que "não existe".
+const formatoId = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export async function buscarTurma(id: string): Promise<Turma | null> {
+  await connection();
+  if (!formatoId.test(id)) return null;
+  const linha = exigir(await supabase().from("turmas").select(colunasTurma).eq("id", id).maybeSingle());
+  return linha ? paraTurma(linha) : null;
+}
+
+const colunasAluna = "id, nome, whatsapp, dia_vencimento, valor_mensalidade, ativa, matriculas(turma_id)";
+
+type LinhaAluna = {
+  id: string;
+  nome: string;
+  whatsapp: string;
+  dia_vencimento: number;
+  valor_mensalidade: number;
+  ativa: boolean;
+  matriculas: { turma_id: string }[];
+};
+
+function paraAluna(a: LinhaAluna): Aluna {
+  return {
+    id: a.id,
+    nome: a.nome,
+    whatsapp: a.whatsapp,
+    turmaIds: a.matriculas.map((m) => m.turma_id),
+    diaVencimento: a.dia_vencimento,
+    valorMensalidade: Number(a.valor_mensalidade),
+    ativa: a.ativa,
+  };
 }
 
 export async function listarAlunas(): Promise<Aluna[]> {
   await connection();
-  const linhas = exigir(
-    await supabase()
-      .from("alunas")
-      .select("id, nome, whatsapp, dia_vencimento, valor_mensalidade, ativa, matriculas(turma_id)")
-      .order("nome"),
-  );
-  return linhas.map((a) => ({
-    id: a.id,
-    nome: a.nome,
-    whatsapp: a.whatsapp,
-    turmaIds: a.matriculas.map((m: { turma_id: string }) => m.turma_id),
-    diaVencimento: a.dia_vencimento,
-    valorMensalidade: Number(a.valor_mensalidade),
-    ativa: a.ativa,
-  }));
+  const linhas = exigir(await supabase().from("alunas").select(colunasAluna).order("nome"));
+  return linhas.map(paraAluna);
+}
+
+export async function buscarAluna(id: string): Promise<Aluna | null> {
+  await connection();
+  if (!formatoId.test(id)) return null;
+  const linha = exigir(await supabase().from("alunas").select(colunasAluna).eq("id", id).maybeSingle());
+  return linha ? paraAluna(linha) : null;
 }
 
 export async function listarMensalidades(): Promise<Mensalidade[]> {

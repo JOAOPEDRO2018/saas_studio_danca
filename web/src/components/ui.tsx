@@ -1,11 +1,23 @@
+import Link from "next/link";
 import type { SituacaoAluna, StatusMensalidade } from "@/lib/mensalidades";
 
-export function Cabecalho({ titulo, descricao }: { titulo: string; descricao?: string }) {
+export function Cabecalho({ titulo, descricao, acao }: { titulo: string; descricao?: string; acao?: React.ReactNode }) {
   return (
-    <header className="mb-6">
-      <h1 className="text-2xl font-bold tracking-tight md:text-3xl">{titulo}</h1>
-      {descricao && <p className="mt-1 text-sm text-texto-medio">{descricao}</p>}
+    <header className="mb-6 flex flex-wrap items-start justify-between gap-3">
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight md:text-3xl">{titulo}</h1>
+        {descricao && <p className="mt-1 text-sm text-texto-medio">{descricao}</p>}
+      </div>
+      {acao}
     </header>
+  );
+}
+
+export function BotaoLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="flex h-10 items-center rounded-lg bg-marca px-4 text-sm font-semibold text-white hover:bg-marca-escura">
+      {children}
+    </Link>
   );
 }
 

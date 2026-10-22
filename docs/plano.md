@@ -27,8 +27,8 @@ Cada etapa termina com um commit.
 | 1 | Criar o app Next.js em `web/` | feito |
 | 2 | Protótipo enxuto (Painel, Alunas, Turmas, Mensalidades, Login) com dados de exemplo | feito |
 | 3 | Supabase: criar o projeto e as tabelas, e trocar os dados de exemplo pelos do banco | feito |
-| 4 | Cadastrar e editar alunas e turmas | próxima |
-| 5 | Login de verdade (Supabase Auth), só para a equipe do studio | |
+| 4 | Cadastrar e editar alunas e turmas | feito |
+| 5 | Login de verdade (Supabase Auth), só para a equipe do studio | próxima |
 | 6 | Primeiro deploy na AWS (Amplify Hosting) | |
 | 7 | Gerar as mensalidades de cada mês automaticamente | |
 | 8 | Asaas em ambiente de testes (sandbox): criar a cobrança e receber o aviso de pagamento | |
