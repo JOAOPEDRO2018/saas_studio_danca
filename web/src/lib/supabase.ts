@@ -74,7 +74,8 @@ export async function supabaseLogin() {
 
 // Cliente com a chave secreta: ignora o RLS. Fica reservado para as rotinas
 // automáticas sem pessoa logada (gerar mensalidades, aviso de pagamento do
-// Asaas). Nunca use numa tela.
+// Asaas) e para gravar no log as tentativas de login que falham
+// (login/acoes.ts). Nunca use numa tela.
 export function supabaseAdmin() {
   return createClient(variavel("SUPABASE_URL"), variavel("SUPABASE_SECRET_KEY"), { auth: { persistSession: false } });
 }

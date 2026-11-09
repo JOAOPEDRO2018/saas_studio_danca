@@ -7,11 +7,13 @@
 | `npm run dev` | Sobe o sistema em modo de desenvolvimento em http://localhost:3000 |
 | `npm run build` | Gera a versão de produção (também checa os tipos) |
 | `npm run lint` | Procura problemas no código |
+| `npm test` | Roda os testes automáticos (arquivos `*.test.ts` em `src/lib/`) |
+| `node --env-file=.env.local scripts/verificar-logs.ts` | Confere no banco as regras dos logs (grava registros de teste no log) |
 
 ## Configurar o Supabase (uma vez)
 
 1. Crie uma conta em https://supabase.com e um projeto novo (região **South America (São Paulo)**). Guarde a senha do banco.
-2. No **SQL Editor**, rode na ordem os arquivos de `../supabase/`: `01-tabelas.sql`, `02-dados-exemplo.sql` e `03-login.sql`.
+2. No **SQL Editor**, rode na ordem os arquivos de `../supabase/`: `01-tabelas.sql`, `02-dados-exemplo.sql`, `03-login.sql` e `04-logs.sql`.
 3. Em **Authentication > Sign In / Providers**, desligue **Allow new users to sign up**. Os acessos da equipe são criados só por você.
 4. Em **Authentication > Users > Add user > Create new user**, crie o acesso de cada pessoa da equipe (e-mail e senha, com **Auto Confirm User** marcado). Depois, no SQL Editor, diga quem é quem (perfil `dona` ou `recepcao`):
    ```sql
@@ -29,17 +31,26 @@
 
 | Caminho | Conteúdo |
 |---|---|
-| `src/app/(painel)/` | Telas com menu lateral: Painel (`page.tsx`), `alunas/`, `turmas/`, `mensalidades/` |
+| `src/app/(painel)/` | Telas com menu lateral: Painel (`page.tsx`), `alunas/`, `turmas/`, `mensalidades/` e `logs/` (só a dona vê) |
 | `src/app/(painel)/alunas/` e `turmas/` | Lista (`page.tsx`), cadastro (`nova/`), edição (`[id]/`), formulário (`formulario-*.tsx`) e gravação no banco (`acoes.ts`) |
 | `src/app/login/` | Tela de login e as ações de entrar e sair (`acoes.ts`) |
 | `src/proxy.ts` | Roda antes de cada página: renova a sessão e manda quem não está logado para o login |
 | `src/components/` | Peças visuais reaproveitadas (`ui.tsx`), campos de formulário (`formulario.tsx`) e o menu (`menu.tsx`) |
-| `src/lib/supabase.ts` | Conexões com o Supabase: da equipe logada (respeita o RLS), de login e admin (chave secreta, só para rotinas automáticas) |
+| `src/lib/supabase.ts` | Conexões com o Supabase: da equipe logada (respeita o RLS), de login e admin (chave secreta, só para rotinas automáticas e para gravar as tentativas de login que falham) |
 | `src/lib/dados.ts` | Leitura das tabelas e os tipos usados pelas telas |
+| `src/lib/logs.ts` e `logs-formatar.ts` | Leitura dos logs e os textos da aba Logs ("Valor: R$ 340,00 → R$ 360,00") |
+| `src/lib/matriculas.ts` | Compara as turmas da aluna com as marcadas no formulário, para gravar só o que mudou |
 | `src/lib/mensalidades.ts` | Regras das mensalidades: situação (paga, pendente, atrasada) e envio da cobrança |
-| `../supabase/` | SQL das tabelas e dos dados de exemplo |
+| `../supabase/` | SQL das tabelas, dos dados de exemplo, do login e dos logs |
+| `scripts/` | Verificações rodadas à mão contra o banco |
 | `src/lib/hoje.ts` | Data atual no servidor (ver observação abaixo) |
 | `src/app/globals.css` | Cores e fonte do design system |
+
+## Logs de atividade
+
+O próprio banco registra cada inclusão, alteração e remoção em turmas, alunas, matrículas e mensalidades (triggers do `04-logs.sql`), com quem fez, quando, onde e o antes e depois de cada campo. Mudanças sem pessoa logada aparecem como "Sistema". Entradas, saídas e tentativas de login são gravadas em `src/app/login/acoes.ts`.
+
+Ninguém altera nem apaga um registro com menos de 1 ano, nem com a chave secreta. Só a dona lê. Antes de ir para produção, esvazie os registros de teste no SQL Editor com `truncate logs;`.
 
 ## Observação: Cache Components
 

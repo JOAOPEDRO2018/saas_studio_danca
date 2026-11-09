@@ -25,6 +25,21 @@ async function UsuarioLogado() {
   );
 }
 
+// O menu depende do perfil (a aba Logs é só da dona). Enquanto a sessão é
+// lida, aparece o menu comum.
+async function MenuDoPerfil({ horizontal = false }: { horizontal?: boolean }) {
+  const membro = await membroAtual();
+  return <Menu horizontal={horizontal} ehDona={membro.perfil === "dona"} />;
+}
+
+function MenuDaEquipe({ horizontal = false }: { horizontal?: boolean }) {
+  return (
+    <Suspense fallback={<Menu horizontal={horizontal} ehDona={false} />}>
+      <MenuDoPerfil horizontal={horizontal} />
+    </Suspense>
+  );
+}
+
 function Marca() {
   return (
     <Link href="/" className="flex items-center gap-2">
@@ -39,7 +54,7 @@ export default function LayoutPainel({ children }: { children: React.ReactNode }
     <div className="min-h-screen md:flex">
       <aside className="hidden w-60 shrink-0 flex-col gap-8 border-r border-borda bg-superficie p-5 md:flex">
         <Marca />
-        <Menu />
+        <MenuDaEquipe />
         <div className="mt-auto flex flex-col gap-3">
           <Suspense>
             <UsuarioLogado />
@@ -53,7 +68,7 @@ export default function LayoutPainel({ children }: { children: React.ReactNode }
           <Marca />
           <BotaoSair className="" />
         </div>
-        <Menu horizontal />
+        <MenuDaEquipe horizontal />
       </header>
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>

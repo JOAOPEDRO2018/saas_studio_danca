@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { normalizarWhatsapp } from "@/lib/formatar";
 import type { EstadoFormulario } from "@/lib/formulario";
 import { valoresDo } from "@/lib/formulario";
+import { diferencaDeTurmas } from "@/lib/matriculas";
 import { supabaseDaEquipe } from "@/lib/supabase";
 
 // Cria a aluna (id null) ou atualiza a aluna com esse id, junto com as turmas
@@ -41,11 +42,16 @@ export async function salvarAluna(id: string | null, _estado: EstadoFormulario, 
   if (salva.error) return falha(salva.error.message);
   const alunaId = salva.data.id;
 
-  // Troca as matrículas pelas turmas marcadas no formulário.
-  const removidas = await db.from("matriculas").delete().eq("aluna_id", alunaId);
-  if (removidas.error) return falha(removidas.error.message);
-  if (turmaIds.length > 0) {
-    const novas = await db.from("matriculas").insert(turmaIds.map((turma_id) => ({ aluna_id: alunaId, turma_id })));
+  // Acerta as matrículas: retira só as turmas desmarcadas e inclui só as novas.
+  const atuais = await db.from("matriculas").select("turma_id").eq("aluna_id", alunaId);
+  if (atuais.error) return falha(atuais.error.message);
+  const { incluir, retirar } = diferencaDeTurmas(atuais.data.map((m) => m.turma_id), turmaIds);
+  if (retirar.length > 0) {
+    const removidas = await db.from("matriculas").delete().eq("aluna_id", alunaId).in("turma_id", retirar);
+    if (removidas.error) return falha(removidas.error.message);
+  }
+  if (incluir.length > 0) {
+    const novas = await db.from("matriculas").insert(incluir.map((turma_id) => ({ aluna_id: alunaId, turma_id })));
     if (novas.error) return falha(novas.error.message);
   }
 
