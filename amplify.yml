@@ -1,0 +1,33 @@
+# Receita de build da AWS Amplify (Etapa 7). A Amplify lê este arquivo a cada
+# push na main: instala, compila e publica o sistema que está em web/.
+# Os comandos rodam dentro de web/ (appRoot). Explicação em web/README.md,
+# seção "Publicar na AWS".
+version: 1
+applications:
+  - appRoot: web
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - nvm install 22
+            - nvm use 22
+            - node --version
+            - npm ci
+        build:
+          commands:
+            # Confere só os NOMES das chaves do Supabase cadastradas no console
+            # da Amplify; os valores nunca aparecem no log.
+            - 'for v in SUPABASE_URL SUPABASE_PUBLISHABLE_KEY SUPABASE_SECRET_KEY; do if [ -z "$(printenv $v)" ]; then echo "Falta a variavel $v no console da Amplify"; exit 1; fi; done'
+            # A Amplify não repassa as variáveis do console ao servidor do
+            # Next.js. Gravá-las no .env.production (que nunca vai para o git)
+            # faz o sistema enxergá-las quando alguém acessa.
+            - env | grep -E '^SUPABASE_(URL|PUBLISHABLE_KEY|SECRET_KEY)=' >> .env.production
+            - npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*

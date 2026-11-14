@@ -1,6 +1,7 @@
 // Transforma os registros da tabela logs (supabase/04-logs.sql) nos textos da
 // aba "Logs". Funções puras, testadas em logs-formatar.test.ts (npm test).
 import { formatarMoeda, formatarWhatsapp, nomesDias } from "./formatar.ts";
+import { fusoDoStudio } from "./fuso.ts";
 
 export type AcaoLog = "criou" | "alterou" | "removeu" | "entrou" | "saiu" | "senha_errada" | "sem_acesso";
 
@@ -17,9 +18,8 @@ export type RegistroLog = {
 };
 
 // Sempre no horário de Brasília, mesmo com o servidor em outro fuso (na AWS é UTC).
-const fuso = "America/Sao_Paulo";
-const dia = new Intl.DateTimeFormat("pt-BR", { timeZone: fuso, day: "2-digit", month: "2-digit", year: "numeric" });
-const hora = new Intl.DateTimeFormat("pt-BR", { timeZone: fuso, hour: "2-digit", minute: "2-digit" });
+const dia = new Intl.DateTimeFormat("pt-BR", { timeZone: fusoDoStudio, day: "2-digit", month: "2-digit", year: "numeric" });
+const hora = new Intl.DateTimeFormat("pt-BR", { timeZone: fusoDoStudio, hour: "2-digit", minute: "2-digit" });
 const lista = new Intl.ListFormat("pt-BR", { type: "conjunction" });
 
 // 2026-11-08T17:05:00Z -> "08/11/2026 14:05"
